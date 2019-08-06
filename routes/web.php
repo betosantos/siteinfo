@@ -6,6 +6,7 @@
 // });
 
 Route::get('posts','PostsController@list')->name('posts.list');
+Route::get('posts/form','PostsController@form')->name('posts.form');
 
 
 

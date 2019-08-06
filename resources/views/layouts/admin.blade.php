@@ -12,8 +12,11 @@
 
   <!-- Bootstrap -->
   <link href="{{ asset('admin/vendors/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">
+
   <!-- Font Awesome -->
-  <link href="{{ asset('admin/vendors/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <!-- <link href="{{ asset('admin/vendors/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet"> -->
+
   <!-- NProgress -->
   <link href="{{ asset('admin/vendors/nprogress/nprogress.css') }}" rel="stylesheet">
   <!-- iCheck -->
@@ -63,7 +66,7 @@
                 <li><a><i class="fa fa-home"></i> Posts <span class="fa fa-chevron-down"></span></a>
                   <ul class="nav child_menu">
                     <li><a href="{{ route('posts.list') }}">Lista Posts</a></li>
-                    <li><a href="index.html">Cadastrar</a></li>
+                    <li><a href="{{ route('posts.form') }}">Cadastrar Post</a></li>
                   </ul>
                 </li>
               </ul>

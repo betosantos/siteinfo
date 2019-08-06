@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="images/favicon.ico" type="image/ico" />
 
-  <title>Gentelella Alela! | </title>
+  <title>Painel de Administração </title>
 
   <!-- Bootstrap -->
   <link href="{{ asset('admin/vendors/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -58,13 +58,12 @@
           <!-- sidebar menu -->
           <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
             <div class="menu_section">
-              <h3>General</h3>
+              <h3>Posts</h3>
               <ul class="nav side-menu">
-                <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
+                <li><a><i class="fa fa-home"></i> Posts <span class="fa fa-chevron-down"></span></a>
                   <ul class="nav child_menu">
-                    <li><a href="index.html">Dashboard</a></li>
-                    <li><a href="index2.html">Dashboard2</a></li>
-                    <li><a href="index3.html">Dashboard3</a></li>
+                    <li><a href="{{ route('posts.list') }}">Lista Posts</a></li>
+                    <li><a href="index.html">Cadastrar</a></li>
                   </ul>
                 </li>
               </ul>

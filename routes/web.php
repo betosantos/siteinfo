@@ -5,6 +5,10 @@
 //     return view('welcome');
 // });
 
+Route::get('posts','PostsController@list')->name('posts.list');
+
+
+
 Route::get('adm','AdminController@index');
 
 Route::get('logar','HomeController@logar')->name('logar');

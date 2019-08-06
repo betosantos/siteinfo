@@ -24,8 +24,7 @@ class HomeController extends Controller
     return view('home.index', compact('posts'));
   }
 
-  public function logar()
-  {
+  public function logar()  {
     return view('auth.login');
   }
 

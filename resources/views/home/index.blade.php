@@ -302,7 +302,7 @@ Intro Section
           <div class="card" style="width: 18rem;">
             <img src="{{ asset('img/portfolio/web1.jpg') }}" class="card-img-top" alt="card">
             <div class="card-body">
-              <h5 class="card-title">{{ $post->titulo }}</h5>
+              <h5 class="card-title"><b>{{ $post->titulo }}</b></h5>
               <p class="card-text">{{ $post->descricao }}</p>
               <center><a href="#" class="btn btn-primary">Detalhes</a></center>
             </div>

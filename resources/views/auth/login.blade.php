@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -37,14 +36,14 @@
   <header id="header" style="background: rgba(0, 0, 0, 0.9); padding: 20px 0; height: 72px; transition: all 0.5s;">
     <div class="container-fluid">
       <div id="logo" class="pull-left">
-        <h1><a href="#intro" class="">SiteInfo</a></h1>
+        <h1><a href="{{ route('homepage') }}" class="">SiteInfo</a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="#intro"><img src="img/logo.png" alt="" title="" /></a>-->
       </div>
 
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-          <li class="menu-active"><a href="#intro">Home</a></li>
+          <li class="menu-active"><a href="{{ route('homepage') }}">Home</a></li>
           <li><a href="#about">Sobre</a></li>
           <li><a href="#services">Serviços</a></li>
           <li><a href="#portfolio">Notícias</a></li>

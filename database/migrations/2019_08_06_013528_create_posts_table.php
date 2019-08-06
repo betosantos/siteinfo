@@ -13,7 +13,7 @@ class CreatePostsTable extends Migration
             $table->increments('id');
             $table->string('titulo');
             $table->text('descricao');
-            $table->string('imagem');
+            $table->string('imagem')->nullable();
             $table->timestamps();
         });
     }

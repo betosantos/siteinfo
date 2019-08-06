@@ -297,36 +297,19 @@ Intro Section
     <div class="col-lg-12">
       <div class="row">
 
+        @foreach($posts as $post)
         <div class="col-lg-4">
           <div class="card" style="width: 18rem;">
             <img src="{{ asset('img/portfolio/web1.jpg') }}" class="card-img-top" alt="card">
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+              <h5 class="card-title">{{ $post->titulo }}</h5>
+              <p class="card-text">{{ $post->descricao }}</p>
+              <center><a href="#" class="btn btn-primary">Detalhes</a></center>
             </div>
           </div>
         </div>
-        <div class="col-lg-4">
-          <div class="card" style="width: 18rem;">
-            <img src="{{ asset('img/portfolio/web1.jpg') }}" class="card-img-top" alt="card">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="card" style="width: 18rem;">
-            <img src="{{ asset('img/portfolio/web1.jpg') }}" class="card-img-top" alt="card">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
+        @endforeach
+
 
 
         <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="0.2s">

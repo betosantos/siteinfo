@@ -304,6 +304,7 @@ Intro Section
             <div class="card-body">
               <h5 class="card-title"><b>{{ $post->titulo }}</b></h5>
               <p class="card-text">{{ $post->descricao }}</p>
+              <p class="card-text"><b>Criado em: {{ date('d/m/Y', strtotime($post->created_at)) }}</b></p>
               <center><a href="#" class="btn btn-primary">Detalhes</a></center>
             </div>
           </div>

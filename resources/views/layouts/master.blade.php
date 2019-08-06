@@ -56,7 +56,10 @@
             </ul>
           </li> -->
           <li><a href="#contact">Contato</a></li>
-          <li><a href="{{ route('logar') }}">Login</a></li>
+          @if (Auth::check())            
+          @else
+            <li><a href="{{ route('logar') }}">Login</a></li>
+          @endif
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>

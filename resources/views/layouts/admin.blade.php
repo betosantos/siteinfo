@@ -51,7 +51,7 @@
             </div>
             <div class="profile_info">
               <span>Bem-Vindo,</span>
-              <h2>John Doe</h2>
+              <h2>{{ Auth::user()->name }}</h2>
             </div>
           </div>
           <!-- /menu profile quick info -->
@@ -123,21 +123,27 @@
       <ul class="nav navbar-nav navbar-right">
         <li class="">
           <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-            <img src="{{ asset('admin/production/images/img.jpg') }}" alt="">
+
             @if (Auth::check())
-            {{ Auth::user()->name }}
+              <img src="{{ asset('uploads/users/'.Auth::user()->imagem) }}" width="40" height="40">
+              {{ Auth::user()->name }}
+            @else
+              <img src="{{ asset('padrao/padrao.jpeg') }}" width="80" height="80">
             @endif
+
+
+
             <span class=" fa fa-angle-down"></span>
           </a>
           <ul class="dropdown-menu dropdown-usermenu pull-right">
-            <li><a href="javascript:;"> Profile</a></li>
-            <li>
+            <li><a href="#"><i class="fa fa-cog pull-right"></i> Configurações </a></li>
+            <!-- <li>
               <a href="javascript:;">
                 <span class="badge bg-red pull-right">50%</span>
                 <span>Settings</span>
               </a>
-            </li>
-            <li><a href="javascript:;">Help</a></li>
+            </li> -->
+            <li><a href="javascript:;">Ajuda</a></li>
             <li><a href="{{ url('sair') }}"><i class="fa fa-sign-out pull-right"></i> Sair </a></li>
           </ul>
         </li>
@@ -214,44 +220,44 @@
 <div class="right_col" role="main">
   <!-- top tiles -->
   <!-- <div class="row tile_count">
-    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-      <span class="count_top"><i class="fa fa-user"></i> Total Users</span>
-      <div class="count">2500</div>
-      <span class="count_bottom"><i class="green">4% </i> From last Week</span>
-    </div>
-    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-      <span class="count_top"><i class="fa fa-clock-o"></i> Average Time</span>
-      <div class="count">123.50</div>
-      <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>3% </i> From last Week</span>
-    </div>
-    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-      <span class="count_top"><i class="fa fa-user"></i> Total Males</span>
-      <div class="count green">2,500</div>
-      <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
-    </div>
-    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-      <span class="count_top"><i class="fa fa-user"></i> Total Females</span>
-      <div class="count">4,567</div>
-      <span class="count_bottom"><i class="red"><i class="fa fa-sort-desc"></i>12% </i> From last Week</span>
-    </div>
-    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-      <span class="count_top"><i class="fa fa-user"></i> Total Collections</span>
-      <div class="count">2,315</div>
-      <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
-    </div>
-    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-      <span class="count_top"><i class="fa fa-user"></i> Total Connections</span>
-      <div class="count">7,325</div>
-      <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
-    </div>
-  </div> -->
-  <!-- /top tiles -->
+  <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+  <span class="count_top"><i class="fa fa-user"></i> Total Users</span>
+  <div class="count">2500</div>
+  <span class="count_bottom"><i class="green">4% </i> From last Week</span>
+</div>
+<div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+<span class="count_top"><i class="fa fa-clock-o"></i> Average Time</span>
+<div class="count">123.50</div>
+<span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>3% </i> From last Week</span>
+</div>
+<div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+<span class="count_top"><i class="fa fa-user"></i> Total Males</span>
+<div class="count green">2,500</div>
+<span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
+</div>
+<div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+<span class="count_top"><i class="fa fa-user"></i> Total Females</span>
+<div class="count">4,567</div>
+<span class="count_bottom"><i class="red"><i class="fa fa-sort-desc"></i>12% </i> From last Week</span>
+</div>
+<div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+<span class="count_top"><i class="fa fa-user"></i> Total Collections</span>
+<div class="count">2,315</div>
+<span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
+</div>
+<div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+<span class="count_top"><i class="fa fa-user"></i> Total Connections</span>
+<div class="count">7,325</div>
+<span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
+</div>
+</div> -->
+<!-- /top tiles -->
 
-  <div class="row">
-    <div class="col-md-12 col-sm-4 col-xs-12"><!-- Painel em branco tamanho 12 -->
-      @yield('content')
-    </div>
+<div class="row">
+  <div class="col-md-12 col-sm-4 col-xs-12"><!-- Painel em branco tamanho 12 -->
+    @yield('content')
   </div>
+</div>
 </div>
 <!-- /page content -->
 

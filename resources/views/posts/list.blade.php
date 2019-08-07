@@ -32,7 +32,7 @@
           @if ($post['imagem'])
           <img src="{{ asset('uploads/posts/'.$post->imagem) }}" width="80" height="80">
           @else
-          <img src="{{ asset('uploads/posts/padrao.jpeg') }}" width="80" height="80">
+          <img src="{{ asset('padrao/padrao.jpeg') }}" width="80" height="80">
           @endif
         </td>
         <!-- <img src={{ asset('uploads/posts/'.$post->imagem) }}></td> -->

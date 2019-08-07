@@ -5,6 +5,9 @@
 //     return view('welcome');
 // });
 
+Route::get('profile','UsersController@profile')->name('profile');
+
+
 Route::get('posts','PostsController@list')->name('posts.list');
 Route::get('posts/form','PostsController@form')->name('posts.form');
 Route::post('posts/store','PostsController@store')->name('posts.store');

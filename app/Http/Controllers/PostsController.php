@@ -19,6 +19,18 @@ class PostsController extends Controller
   }
 
 
+  public function store(Request $request) {
+    $dataForm = $request->all();
+
+    if ($request->hasFile('imagem')) {
+      $imagem = $request->file('imagem');
+      $imagemName = uniqid(date('YmdHis')).'.'.$imagem->getClientOriginalExtension();
+      $dataForm['imagem'] = $imagemName;
+      $upload = $imagem->storeAs('posts', $imagemName);
+    }
+
+    $insert = Post::create($dataForm);
+  }
 
 
 }

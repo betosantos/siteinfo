@@ -7,7 +7,7 @@
 
 Route::get('posts','PostsController@list')->name('posts.list');
 Route::get('posts/form','PostsController@form')->name('posts.form');
-
+Route::post('posts/store','PostsController@store')->name('posts.store');
 
 
 Route::get('adm','AdminController@index');

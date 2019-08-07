@@ -13,13 +13,11 @@ class AdminController extends Controller
     $this->middleware('auth');
   }
 
-  public function index()
-  {
+  public function index()   {
     return view('admin.index');
   }
 
-  public function sair()
-  {
+  public function sair()   {
     Auth::logout();
     return redirect()->route('homepage');
   }

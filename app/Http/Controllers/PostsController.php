@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\Bemvindo;
 
 class PostsController extends Controller
 {
@@ -29,7 +31,11 @@ class PostsController extends Controller
       $upload = $imagem->storeAs('posts', $imagemName);
     }
 
+    \Mail::to('teste@siteinfo.com.br')->send(new Bemvindo);
+
     $insert = Post::create($dataForm);
+    return "Ok";
+
   }
 
 

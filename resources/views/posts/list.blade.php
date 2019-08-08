@@ -20,7 +20,6 @@
         <th scope="col"></th>
         <th scope="col">Título</th>
         <th scope="col">Descrição</th>
-        <!-- <th scope="col">Imagem</th> -->
         <th scope="col">Ações</th>
       </tr>
     </thead>
@@ -38,9 +37,9 @@
         <!-- <img src={{ asset('uploads/posts/'.$post->imagem) }}></td> -->
         <td>{{ $post->titulo }}</td>
         <td>{{ $post->descricao }}</td>
-        <td class="float-right">
-          <a href="#"><i class="fa fa-id-card-o" aria-hidden="true"></i></a> &nbsp;
-          <a href="#"><i class="fa fa-id-card-o" aria-hidden="true"></i></a>
+        <td>
+          <th><a href="#"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a></th>
+          <th><a href="#"><i class="fa fa-times fa-lg" aria-hidden="true"></i></a></th>
         </td>
       </tr>
       @endforeach

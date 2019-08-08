@@ -4,8 +4,10 @@
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+Route::post('send','PostsController@send');
 
 Route::get('profile','UsersController@profile')->name('profile');
+
 
 
 Route::get('posts','PostsController@list')->name('posts.list');

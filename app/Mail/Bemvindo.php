@@ -2,6 +2,7 @@
 
 namespace App\Mail;
 
+use App\Post;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
@@ -9,25 +10,30 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 
 class Bemvindo extends Mailable
 {
-    use Queueable, SerializesModels;
+  use Queueable, SerializesModels;
 
-    /**
-     * Create a new message instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        //
-    }
+  public $post;
 
-    /**
-     * Build the message.
-     *
-     * @return $this
-     */
-    public function build()
-    {
-        return $this->view('emails.bemvindo');
-    }
+  public function __construct(Post $post)
+  {
+    $this->post = $post;
+  }
+
+  /**
+  * Build the message.
+  *
+  * @return $this
+  */
+  public function build()
+  {
+    return $this->view('emails.bemvindo')
+    ->with([
+      'titulo' => $this->post->titulo,
+      'descricao' => $this->post->descricao,
+    ]);
+  }
+  
+
+
+
 }

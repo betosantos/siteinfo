@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Post;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\Bemvindo;
+use App\User;
+
 
 class PostsController extends Controller
 {
@@ -31,12 +33,40 @@ class PostsController extends Controller
       $upload = $imagem->storeAs('posts', $imagemName);
     }
 
-    \Mail::to('teste@siteinfo.com.br')->send(new Bemvindo);
-
     $insert = Post::create($dataForm);
-    return "Ok";
 
+    // Envio e-mail
+    // $user = auth()->user();
+    // Mail::to($user)->send(new Bemvindo($user));
+
+    return redirect('posts');
   }
+
+
+  public function send(Request $request) {
+    $validator = \Validator::make($request->all(), [
+      'name' => 'required|max:255',
+      'email' => 'required|email|max:255',
+      'subject' => 'required',
+      'message' => 'required']
+    );
+
+    if ($validator->fails()) {
+      return redirect('contact')->withInput()->withErrors($validator);
+    }
+
+    $name = $request->name;
+    $email = $request->email;
+    $subject = $request->subject;
+    $message = $request->message;
+
+    \Mail::send('emails.bemvindo', ['name' => $name, 'email' => $email, 'subject' => $subject, 'message' => $message], function ($message) {
+      $message->to('oliveira.roberto@gmail.com')->subject('Subject of the message!');
+    });
+
+    return redirect('home')->with('status', 'You have successfully sent an email to the admin!');
+  }
+
 
 
 }

@@ -127,20 +127,6 @@ Intro Section
       </header>
 
       <div class="row about-cols">
-
-        <div class="col-md-4 wow fadeInUp">
-          <div class="about-col">
-            <div class="img">
-              <img src="img/about-mission.jpg" alt="" class="img-fluid">
-              <div class="icon"><i class="ion-ios-speedometer-outline"></i></div>
-            </div>
-            <h2 class="title"><a href="#">Missão</a></h2>
-            <p>
-              Planejar e prover soluções de tecnologia unindo rigor técnico e agilidade de execução através de equipe de alto desempenho na vanguarda do cenário competitivo.
-            </p>
-          </div>
-        </div>
-
         <div class="col-md-4 wow fadeInUp" data-wow-delay="0.1s">
           <div class="about-col">
             <div class="img">
@@ -154,6 +140,19 @@ Intro Section
           </div>
         </div>
 
+        <div class="col-md-4 wow fadeInUp">
+          <div class="about-col">
+            <div class="img">
+              <img src="img/about-mission.jpg" alt="" class="img-fluid">
+              <div class="icon"><i class="ion-ios-speedometer-outline"></i></div>
+            </div>
+            <h2 class="title"><a href="#">Missão</a></h2>
+            <p>
+              Planejar e prover soluções de tecnologia unindo rigor técnico e agilidade de execução de tarefas de alto desempenho na vanguarda do cenário competitivo.
+            </p>
+          </div>
+        </div>
+
         <div class="col-md-4 wow fadeInUp" data-wow-delay="0.2s">
           <div class="about-col">
             <div class="img">
@@ -162,7 +161,7 @@ Intro Section
             </div>
             <h2 class="title"><a href="#">Visão</a></h2>
             <p>
-              Tornar-se referência de atuação na área de tecologia da informação, através da excelência em serviços, contribuindo com os resultados dos clientes, assegurando a sustentabilidade do negócio, responsabilidade e o bem-estar das pessoas.
+              Tornar-se referência de atuação na área de tecologia da informação, através da excelência em serviços, contribuindo com os resultados dos clientes, responsabilidade e o bem-estar das pessoas.
             </p>
           </div>
         </div>
@@ -238,98 +237,72 @@ Intro Section
   <!--==========================
   Facts Section
   ============================-->
-  <section id="facts"  class="wow fadeIn">
-    <div class="container">
-
-      <header class="section-header">
-        <h3>Facts</h3>
-        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
-      </header>
-
-      <div class="row counters">
-
-        <div class="col-lg-3 col-6 text-center">
-          <span data-toggle="counter-up">274</span>
-          <p>Clients</p>
-        </div>
-
-        <div class="col-lg-3 col-6 text-center">
-          <span data-toggle="counter-up">421</span>
-          <p>Projects</p>
-        </div>
-
-        <div class="col-lg-3 col-6 text-center">
-          <span data-toggle="counter-up">1,364</span>
-          <p>Hours Of Support</p>
-        </div>
-
-        <div class="col-lg-3 col-6 text-center">
-          <span data-toggle="counter-up">18</span>
-          <p>Hard Workers</p>
-        </div>
-
-      </div>
-
-      <div class="facts-img">
-        <!-- <img src="img/facts-img.png" alt="" class="img-fluid"> -->
-        <img src="{{ asset('img/laptop.png') }}" alt="" class="img-fluid" width="700" height="260">
-      </div>
-
-    </div>
-  </section><!-- #facts -->
+  <!-- <section id="facts"  class="wow fadeIn">
+  <div class="container">
+  <header class="section-header">
+  <h3>Facts</h3>
+  <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+</header>
+<div class="row counters">
+<div class="col-lg-3 col-6 text-center">
+<span data-toggle="counter-up">274</span>
+<p>Clients</p>
+</div>
+<div class="col-lg-3 col-6 text-center">
+<span data-toggle="counter-up">421</span>
+<p>Projects</p>
+</div>
+<div class="col-lg-3 col-6 text-center">
+<span data-toggle="counter-up">1,364</span>
+<p>Hours Of Support</p>
+</div>
+<div class="col-lg-3 col-6 text-center">
+<span data-toggle="counter-up">18</span>
+<p>Hard Workers</p>
+</div>
+</div>
+<div class="facts-img">
+<img src="img/facts-img.png" alt="" class="img-fluid">
+<img src="{{ asset('img/laptop.png') }}" alt="" class="img-fluid" width="700" height="260">
+</div>
+</div>
+</section> -->
 
 
-  <!--==========================
-  Portfolio Section
-  ============================-->
-  <section id="portfolio"  class="section-bg" >
-    <div class="container">
+<!--==========================
+Portfolio Section
+============================-->
+<section id="portfolio"  class="section-bg" >
+  <div class="container">
 
-      <header class="section-header">
-        <h3 class="section-title">Notícias</h3>
-      </header>
+    <header class="section-header">
+      <h3 class="section-title">Notícias</h3>
+    </header>
 
-      <div class="row">
-        <!-- <div class="col-lg-12">
-      </div> -->
-    </div>
+    <div class="row">
+      <!-- <div class="col-lg-12">
+    </div> -->
+  </div>
 
-    <div class="col-lg-12">
-      <div class="row">
-
-        @foreach($posts as $post)
-        <div class="col-lg-4">
-          <div class="card" style="width: 18rem;">
-            <img src="{{ asset('img/portfolio/web1.jpg') }}" class="card-img-top" alt="card">
-            <div class="card-body">
-              <h5 class="card-title"><b>{{ $post->titulo }}</b></h5>
-              <p class="card-text">{{ $post->descricao }}</p>
-              <p class="card-text"><b>Criado em: {{ date('d/m/Y', strtotime($post->created_at)) }}</b></p>
-              <center><a href="#" class="btn btn-primary">Detalhes</a></center>
-            </div>
+  <div class="col-lg-12">
+    <div class="row">
+      @foreach($posts as $post)
+      <div class="col-lg-4">
+        <div class="card" style="width: 18rem; margin-top:15px;">
+          <img src="{{ asset('img/portfolio/web1.jpg') }}" class="card-img-top" alt="card">
+          <div class="card-body">
+            <h5 class="card-title"><b>{{ $post->titulo }}</b></h5>
+            <p class="card-text">{{ $post->descricao }}</p>
+            <p class="card-text"><b>Criado em: {{ date('d/m/Y', strtotime($post->created_at)) }}</b></p>
+            <center><a href="#" class="btn btn-primary">Detalhes</a></center>
           </div>
         </div>
-        @endforeach
-
-
-
-        <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="0.2s">
-        <div class="portfolio-wrap">
-        <figure>
-        <img src="img/portfolio/web1.jpg" class="img-fluid" alt="">
-        <a href="img/portfolio/web1.jpg" class="link-preview" data-lightbox="portfolio" data-title="Web 1" title="Preview"><i class="ion ion-eye"></i></a>
-        <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-      </figure>
-
-      <div class="portfolio-info">
-      <h4><a href="#">Web 1</a></h4>
-      <p>O Lorem Ipsum é um texto modelo da indústria tipográfica </p>
-    </div>
+      </div>
+      @endforeach
+    </div><!-- FIM DA ROW -->
+    <br/>
+    <a href="#">Ver Notícias</a>
   </div>
-</div> -->
-</div><!-- FIM DA ROW -->
-</div>
-
 </div>
 </section><!-- #portfolio -->
 
@@ -340,18 +313,17 @@ Clients Section
   <div class="container">
 
     <header class="section-header">
-      <h3>Our Clients</h3>
+      <h3>Parceiros</h3>
     </header>
 
     <div class="owl-carousel clients-carousel">
-      <img src="img/clients/client-1.png" alt="">
-      <img src="img/clients/client-2.png" alt="">
-      <img src="img/clients/client-3.png" alt="">
-      <img src="img/clients/client-4.png" alt="">
-      <img src="img/clients/client-5.png" alt="">
-      <img src="img/clients/client-6.png" alt="">
-      <img src="img/clients/client-7.png" alt="">
-      <img src="img/clients/client-8.png" alt="">
+      <img src="img/clients/ubuntu.png" alt="">
+      <img src="img/clients/php.png" alt="">
+      <img src="img/clients/mysql.png" alt="">
+      <img src="img/clients/laravel.png" alt="">
+      <img src="img/clients/linux.jpg" alt="">
+      <img src="img/clients/wordpress.png" alt="">
+      <img src="img/clients/google.jpg" alt="">
     </div>
 
   </div>
@@ -401,26 +373,26 @@ Contact Section
   <div id="sendmessage">Your message has been sent. Thank you!</div>
   <div id="errormessage"></div>
   <form action="{{ url('send') }}" method="post">
-    @csrf 
+    @csrf
     <div class="form-row">
       <div class="form-group col-md-6">
-        <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+        <input type="text" name="name" class="form-control" id="name" placeholder="Seu Nome Completo" data-rule="minlen:4" data-msg="Mínimo 4 caracteres no campo nome" />
         <div class="validation"></div>
       </div>
       <div class="form-group col-md-6">
-        <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+        <input type="email" class="form-control" name="email" id="email" placeholder="Seu E-mail válido" data-rule="email" data-msg="Entre com um e-mail válido" />
         <div class="validation"></div>
       </div>
     </div>
     <div class="form-group">
-      <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+      <input type="text" class="form-control" name="subject" id="subject" placeholder="Assunto" data-rule="minlen:4" data-msg="Mínimo de 8 caracteres no assunto" />
       <div class="validation"></div>
     </div>
     <div class="form-group">
-      <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+      <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Mensagem" placeholder="Mensagem"></textarea>
       <div class="validation"></div>
     </div>
-    <div class="text-center"><button type="submit">Send Message</button></div>
+    <div class="text-center"><button type="submit">Enviar</button></div>
   </form>
 </div>
 

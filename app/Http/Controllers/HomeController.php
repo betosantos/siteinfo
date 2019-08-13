@@ -15,12 +15,12 @@ class HomeController extends Controller
 
 
   public function index()  {
-    $posts = Post::all();
+    $posts = Post::orderBy('created_at','desc')->take(6)->get();
     return view('home.index', compact('posts'));
   }
 
   public function homepage()  {
-    $posts = Post::all();
+    $posts = Post::orderBy('created_at','desc')->take(6)->get();    
     return view('home.index', compact('posts'));
   }
 

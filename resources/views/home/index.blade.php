@@ -123,7 +123,12 @@ Intro Section
 
       <header class="section-header">
         <h3>Sobre</h3>
-        <p>A tecnologia e suas ferramentas é hoje o principal caminho para a melhoria dos processos e organização da gestão empresarial. Entender a importância da tecnologia da informação nas empresas faz com que dê-se a devida atenção à tal setor na empresa.</p>
+        <p>
+          A Tecnologia da Informação (TI) é uma área ou grupo no qual se desenvolve a grande maioria de atividades e serviços desenvolvidos pela área da computação.
+          Ou seja, são todos os proventos de informática desenvolvidos para melhoria de processos, trazendo automatização aos mesmos.
+          Para o ramo empresarial em especial, a atuação do TI se dá por meio de softwares de gestão, maquinários específicos, inteligência artificial, etc.
+          
+        </p>
       </header>
 
       <div class="row about-cols">

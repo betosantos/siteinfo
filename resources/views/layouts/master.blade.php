@@ -56,7 +56,7 @@
             </ul>
           </li> -->
           <li><a href="#contact">Contato</a></li>
-          @if (Auth::check())            
+          @if (Auth::check())
           @else
             <li><a href="{{ route('logar') }}">Login</a></li>
           @endif
@@ -84,7 +84,9 @@
 
           <div class="col-lg-3 col-md-6 footer-info">
             <h3>SiteInfo</h3>
-            <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus. Scelerisque felis imperdiet proin fermentum leo. Amet volutpat consequat mauris nunc congue.</p>
+            <p>A Tecnologia da Informação (TI) é uma área ou grupo no qual se desenvolve a grande maioria de atividades e serviços desenvolvidos pela área da computação.
+              Ou seja, são todos os proventos de informática desenvolvidos para melhoria de processos, trazendo automatização aos mesmos.
+            </p>
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
@@ -104,8 +106,8 @@
               A108 Adam Street <br>
               New York, NY 535022<br>
               United States <br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
+              <strong>Phone:</strong> +55 (11) 99610-8766<br>
+              <strong>Email:</strong> oliveira.roberto@gmail.com<br>
             </p>
 
             <div class="social-links">
@@ -119,10 +121,11 @@
           </div>
 
           <div class="col-lg-3 col-md-6 footer-newsletter">
-            <h4>Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna veniam enim veniam illum dolore legam minim quorum culpa amet magna export quem marada parida nodela caramase seza.</p>
+            <h4>Assine o Newsletter</h4>
+            <p>Carastre seu e-mail e tenha acesso a importantes notícias na área de Tecnologia da Informação no Brasil e no mundo, receba tambem dicas importantes na área de tecnologia tudo isso gratuitamente, é só se cadastrar.</p>
             <form action="" method="post">
-              <input type="email" name="email"><input type="submit"  value="Subscribe">
+              <input type="email" name="email" placeholder="Seu EMail">              
+              <input type="submit"  value="Assinar">
             </form>
           </div>
 

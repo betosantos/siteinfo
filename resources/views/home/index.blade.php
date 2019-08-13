@@ -19,7 +19,7 @@ Intro Section
             <div class="carousel-content">
               <h2>Consultoria Digital</h2>
               <p>Mais de 11 anos atuando na área de tecnologia da informação. Desenhar estratégias para sua empresa, compreender e se posicionar junto ao mercado de tecnologia com base nas transformações digitais.</p>
-              <a href="#featured-services" class="btn-get-started scrollto">Conheça</a>
+              <a href="#services" class="btn-get-started scrollto">Conheça</a>
             </div>
           </div>
         </div>
@@ -29,7 +29,7 @@ Intro Section
             <div class="carousel-content">
               <h2>Desenvolvimento de Sites</h2>
               <p>Desenvolvimento e criação de Sites, Hotsites, Blogs, Portais e catálogos on-line. Trabalhando com tecnologias e plataformas Open Source, adequando-se à necessidades primárias de cada cliente.</p>
-              <a href="#featured-services" class="btn-get-started scrollto">Conheça</a>
+              <a href="#services" class="btn-get-started scrollto">Conheça</a>
             </div>
           </div>
         </div>
@@ -39,7 +39,7 @@ Intro Section
             <div class="carousel-content">
               <h2>Sistemas Web</h2>
               <p>Criação e Desenvolvimento de Intranet (local ou nuvem), áreas restritas com segurança utilizando login e senha de acesso, adequando sempre as necessidades pontuais de cada empresa..</p>
-              <a href="#featured-services" class="btn-get-started scrollto">Conheça</a>
+              <a href="#services" class="btn-get-started scrollto">Conheça</a>
             </div>
           </div>
         </div>
@@ -127,7 +127,7 @@ Intro Section
           A Tecnologia da Informação (TI) é uma área ou grupo no qual se desenvolve a grande maioria de atividades e serviços desenvolvidos pela área da computação.
           Ou seja, são todos os proventos de informática desenvolvidos para melhoria de processos, trazendo automatização aos mesmos.
           Para o ramo empresarial em especial, a atuação do TI se dá por meio de softwares de gestão, maquinários específicos, inteligência artificial, etc.
-          
+
         </p>
       </header>
 

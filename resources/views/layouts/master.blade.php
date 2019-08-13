@@ -46,15 +46,14 @@
           <li class="menu-active"><a href="{{ route('homepage') }}">Home</a></li>
           <li><a href="#about">Sobre</a></li>
           <li><a href="#services">Serviços</a></li>
-          <li><a href="#portfolio">Notícias</a></li>
-          <!-- <li class="menu-has-children"><a href="">Drop Down</a>
+          <li class="menu-has-children"><a href="{{ route('noticias') }}">Notícias</a>
             <ul>
               <li><a href="#">Drop Down 1</a></li>
               <li><a href="#">Drop Down 3</a></li>
               <li><a href="#">Drop Down 4</a></li>
               <li><a href="#">Drop Down 5</a></li>
             </ul>
-          </li> -->
+          </li>
           <li><a href="#contact">Contato</a></li>
           @if (Auth::check())
           @else
@@ -65,12 +64,10 @@
     </div>
   </header><!-- #header -->
 
-
   <!--==========================
   Content
   ============================-->
   @yield('content')
-
 
 
 
@@ -122,9 +119,9 @@
 
           <div class="col-lg-3 col-md-6 footer-newsletter">
             <h4>Assine o Newsletter</h4>
-            <p>Carastre seu e-mail e tenha acesso a importantes notícias na área de Tecnologia da Informação no Brasil e no mundo, receba tambem dicas importantes na área de tecnologia tudo isso gratuitamente, é só se cadastrar.</p>
+            <p>Carastre seu e-mail e tenha acesso a importantes notícias na área de Tecnologia da Informação no Brasil e no mundo, receba tambem dicas importantes na área de tecnologia, tudo isso gratuitamente é só se cadastrar.</p>
             <form action="" method="post">
-              <input type="email" name="email" placeholder="Seu EMail">              
+              <input type="email" name="email" placeholder="Seu EMail">
               <input type="submit"  value="Assinar">
             </form>
           </div>

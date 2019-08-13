@@ -4,6 +4,8 @@
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+Route::get('noticias','NoticiasController@index')->name('noticias');
+
 Route::post('send','PostsController@send');
 
 Route::get('profile','UsersController@profile')->name('profile');

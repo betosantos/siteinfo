@@ -20,13 +20,14 @@ class HomeController extends Controller
   }
 
   public function homepage()  {
-    $posts = Post::orderBy('created_at','desc')->take(6)->get();    
+    $posts = Post::orderBy('created_at','desc')->take(6)->get();
     return view('home.index', compact('posts'));
   }
 
   public function logar()  {
     return view('auth.login');
   }
+
 
 
 }

@@ -397,7 +397,7 @@ Contact Section
       <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Mensagem" placeholder="Mensagem" required></textarea>
       <div class="validation"></div>
     </div>
-    <div class="text-center"><button type="submit">Enviar</button></div>
+    <div class="text-center"><button type="submit" onclick="EnviarEmail()">Enviar Mensagem</button></div>
   </form>
 </div>
 

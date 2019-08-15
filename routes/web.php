@@ -7,6 +7,8 @@
 Route::get('noticias','NoticiasController@index')->name('noticias');
 
 Route::post('send','PostsController@send');
+Route::post('assinar','NewsletterController@assinar')->name('assinar');
+
 
 Route::get('profile','UsersController@profile')->name('profile');
 

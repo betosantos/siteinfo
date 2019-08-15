@@ -26,6 +26,7 @@
 
   <!-- Main Stylesheet File -->
   <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+
 </head>
 
 <body>
@@ -57,7 +58,7 @@
           <li><a href="#contact">Contato</a></li>
           @if (Auth::check())
           @else
-            <li><a href="{{ route('logar') }}">Login</a></li>
+          <li><a href="{{ route('logar') }}">Login</a></li>
           @endif
         </ul>
       </nav><!-- #nav-menu-container -->
@@ -90,20 +91,19 @@
             <h4>Useful Links</h4>
             <ul>
               <li><i class="ion-ios-arrow-right"></i> <a href="#">Home</a></li>
-              <li><i class="ion-ios-arrow-right"></i> <a href="#">About us</a></li>
-              <li><i class="ion-ios-arrow-right"></i> <a href="#">Services</a></li>
-              <li><i class="ion-ios-arrow-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="ion-ios-arrow-right"></i> <a href="#">Privacy policy</a></li>
+              <li><i class="ion-ios-arrow-right"></i> <a href="#about">Sobre</a></li>
+              <li><i class="ion-ios-arrow-right"></i> <a href="#services">Serviços</a></li>
+              <li><i class="ion-ios-arrow-right"></i> <a href="#contact">Contato</a></li>
             </ul>
           </div>
 
           <div class="col-lg-3 col-md-6 footer-contact">
-            <h4>Contact Us</h4>
+            <h4>Contato</h4>
             <p>
-              A108 Adam Street <br>
+              <!-- A108 Adam Street <br>
               New York, NY 535022<br>
-              United States <br>
-              <strong>Phone:</strong> +55 (11) 99610-8766<br>
+              United States <br> -->
+              <strong>Cel. Whtatsapp:</strong> +55 (11) 99610-8766<br>
               <strong>Email:</strong> oliveira.roberto@gmail.com<br>
             </p>
 
@@ -120,9 +120,11 @@
           <div class="col-lg-3 col-md-6 footer-newsletter">
             <h4>Assine o Newsletter</h4>
             <p>Cadastre seu e-mail e tenha acesso a importantes notícias na área de Tecnologia da Informação no Brasil e no mundo, receba tambem dicas importantes na área de tecnologia, tudo isso gratuitamente é só se cadastrar.</p>
-            <form action="" method="post">
-              <input type="email" name="email" placeholder="Seu EMail">
-              <input type="submit"  value="Assinar">
+            <form action="{{ url('assinar') }}" method="post">
+              <input type="hidden" name="_token" value="{{ csrf_token() }}">
+              <!-- <input type="email" name="email" placeholder="Seu EMail" style="width:250px"> -->
+              <input type="email" class="form-control" name="email" id="email" placeholder="Informe seu E-mail" data-rule="email" data-msg="Entre com um e-mail válido" required/>
+              <input type="submit" value="Assinar" onclick="myFunction()">
             </form>
           </div>
 
@@ -163,6 +165,18 @@
 
   <!-- Template Main Javascript File -->
   <script src="{{ asset('js/main.js') }}"></script>
+
+  <script>
+  function myFunction() {
+    alert("Seu E-mail foi cadastrado com Sucesso!!!");
+  }
+
+  function EnviarEmail() {
+    alert("Sua Mensagem foi enviada com Sucesso, em breve entrarei em Contato. Obrigado pelo contato.");
+  }
+
+  </script>
+
 
 </body>
 </html>

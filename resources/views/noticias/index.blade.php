@@ -44,8 +44,8 @@
       <nav id="nav-menu-container">
         <ul class="nav-menu">
           <li class="menu-active"><a href="{{ route('homepage') }}">Home</a></li>
-          <li><a href="#about">Sobre</a></li>
-          <li><a href="#services">Serviços</a></li>          
+          <li><a href="{{ url('home') }}#about">Sobre</a></li>
+          <li><a href="{{ url('home') }}#services">Serviços</a></li>
           <li class="menu-has-children"><a href="{{ route('noticias') }}">Notícias</a>
             <ul>
               <li><a href="#">Drop Down 1</a></li>
@@ -54,7 +54,7 @@
               <li><a href="#">Drop Down 5</a></li>
             </ul>
           </li>
-          <li><a href="#contact">Contato</a></li>
+          <li><a href="{{ url('home') }}#contact">Contato</a></li>
           <li><a href="{{ route('logar') }}">Login</a></li>
         </ul>
       </nav><!-- #nav-menu-container -->
@@ -117,7 +117,7 @@
 <!--==========================
 Footer
 ============================-->
-<footer id="footer">
+<!-- <footer id="footer">
   <div class="footer-top">
     <div class="container">
       <div class="row">
@@ -130,11 +130,11 @@ Footer
         <div class="col-lg-3 col-md-6 footer-links">
           <h4>Useful Links</h4>
           <ul>
-            <li><i class="ion-ios-arrow-right"></i> <a href="#">Home</a></li>
-            <li><i class="ion-ios-arrow-right"></i> <a href="#">About us</a></li>
-            <li><i class="ion-ios-arrow-right"></i> <a href="#">Services</a></li>
-            <li><i class="ion-ios-arrow-right"></i> <a href="#">Terms of service</a></li>
-            <li><i class="ion-ios-arrow-right"></i> <a href="#">Privacy policy</a></li>
+            <li><i class="ion-ios-arrow-right"></i> <a href="{{ url('home') }}">Home</a></li>
+            <li><i class="ion-ios-arrow-right"></i> <a href="{{ url('home') }}#about">Sobre</a></li>
+            <li><i class="ion-ios-arrow-right"></i> <a href="{{ url('home') }}#services">Serviços</a></li>
+            <li><i class="ion-ios-arrow-right"></i> <a href="{{ url('noticias') }}">Notícias</a></li>
+            <li><i class="ion-ios-arrow-right"></i> <a href="{{ url('home') }}#contact">Contato</a></li>
           </ul>
         </div>
 
@@ -178,31 +178,11 @@ Footer
       Desenvolvido por: <a href="http://www.siteinfo.com.br/">José Roberto Oliveira</a>
     </div>
   </div>
-</footer><!-- #footer -->
+</footer> -->
 
-<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-<!-- Uncomment below i you want to use a preloader -->
-<!-- <div id="preloader"></div> -->
+@include('layouts/rodape')
 
-<!-- JavaScript Libraries -->
-<script src="{{ asset('lib/jquery/jquery.min.js') }}"></script>
-<script src="{{ asset('lib/jquery/jquery-migrate.min.js') }}"></script>
-<script src="{{ asset('lib/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-<script src="{{ asset('lib/easing/easing.min.js') }}"></script>
-<script src="{{ asset('lib/superfish/hoverIntent.js') }}"></script>
-<script src="{{ asset('lib/superfish/superfish.min.js') }}"></script>
-<script src="{{ asset('lib/wow/wow.min.js') }}"></script>
-<script src="{{ asset('lib/waypoints/waypoints.min.js') }}"></script>
-<script src="{{ asset('lib/counterup/counterup.min.js') }}"></script>
-<script src="{{ asset('lib/owlcarousel/owl.carousel.min.js') }}"></script>
-<script src="{{ asset('lib/isotope/isotope.pkgd.min.js') }}"></script>
-<script src="{{ asset('lib/lightbox/js/lightbox.min.js') }}"></script>
-<script src="{{ asset('lib/touchSwipe/jquery.touchSwipe.min.js') }}"></script>
-<!-- Contact Form JavaScript File -->
-<script src="{{ asset('contactform/contactform.js') }}"></script>
 
-<!-- Template Main Javascript File -->
-<script src="{{ asset('js/main.js') }}"></script>
 
 </body>
 </html>

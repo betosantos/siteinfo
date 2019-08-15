@@ -93,6 +93,7 @@
               <li><i class="ion-ios-arrow-right"></i> <a href="#">Home</a></li>
               <li><i class="ion-ios-arrow-right"></i> <a href="#about">Sobre</a></li>
               <li><i class="ion-ios-arrow-right"></i> <a href="#services">Serviços</a></li>
+              <li><i class="ion-ios-arrow-right"></i> <a href="{{ url('noticias') }}">Notícias</a></li>
               <li><i class="ion-ios-arrow-right"></i> <a href="#contact">Contato</a></li>
             </ul>
           </div>

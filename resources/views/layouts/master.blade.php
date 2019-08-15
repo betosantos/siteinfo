@@ -119,7 +119,7 @@
 
           <div class="col-lg-3 col-md-6 footer-newsletter">
             <h4>Assine o Newsletter</h4>
-            <p>Carastre seu e-mail e tenha acesso a importantes notícias na área de Tecnologia da Informação no Brasil e no mundo, receba tambem dicas importantes na área de tecnologia, tudo isso gratuitamente é só se cadastrar.</p>
+            <p>Cadastre seu e-mail e tenha acesso a importantes notícias na área de Tecnologia da Informação no Brasil e no mundo, receba tambem dicas importantes na área de tecnologia, tudo isso gratuitamente é só se cadastrar.</p>
             <form action="" method="post">
               <input type="email" name="email" placeholder="Seu EMail">
               <input type="submit"  value="Assinar">

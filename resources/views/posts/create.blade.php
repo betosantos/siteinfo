@@ -19,6 +19,18 @@
   <form method="POST" enctype="multipart/form-data" action="{{ route('posts.store') }}">
     @csrf
     <div class="row">
+
+      <div class="form-group col-md-12" style="margin-top:15px;">
+        <label for="titulo">Categoria</label>
+        <select name="categoria_id" class="form-control">
+          <option value="">Selecione uma Categoria</option>
+          @foreach( $categorias as $categoria )
+          <option value="{{ $categoria->id }}">{{ $categoria->nome }}</option>
+          @endforeach
+        </select>
+      </div>
+
+
       <div class="form-group col-md-12">
         <label for="titulo">Título</label>
         <input type="text" class="form-control" id="titulo" name="titulo" placeholder="Título do Post">

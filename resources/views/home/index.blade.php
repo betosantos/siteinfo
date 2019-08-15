@@ -381,20 +381,20 @@ Contact Section
     @csrf
     <div class="form-row">
       <div class="form-group col-md-6">
-        <input type="text" name="name" class="form-control" id="name" placeholder="Seu Nome Completo" data-rule="minlen:4" data-msg="Mínimo 4 caracteres no campo nome" />
+        <input type="text" name="name" class="form-control" id="name" placeholder="Seu Nome Completo" data-rule="minlen:4" data-msg="Mínimo 4 caracteres no campo nome" required/>
         <div class="validation"></div>
       </div>
       <div class="form-group col-md-6">
-        <input type="email" class="form-control" name="email" id="email" placeholder="Seu E-mail válido" data-rule="email" data-msg="Entre com um e-mail válido" />
+        <input type="email" class="form-control" name="email" id="email" placeholder="Seu E-mail válido" data-rule="email" data-msg="Entre com um e-mail válido" required/>
         <div class="validation"></div>
       </div>
     </div>
     <div class="form-group">
-      <input type="text" class="form-control" name="subject" id="subject" placeholder="Assunto" data-rule="minlen:4" data-msg="Mínimo de 8 caracteres no assunto" />
+      <input type="text" class="form-control" name="subject" id="subject" placeholder="Assunto" data-rule="minlen:4" data-msg="Mínimo de 8 caracteres no assunto" required/>
       <div class="validation"></div>
     </div>
     <div class="form-group">
-      <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Mensagem" placeholder="Mensagem"></textarea>
+      <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Mensagem" placeholder="Mensagem" required></textarea>
       <div class="validation"></div>
     </div>
     <div class="text-center"><button type="submit">Enviar</button></div>

@@ -7,6 +7,7 @@ use App\Post;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\Bemvindo;
 use App\User;
+use App\Categoria;
 
 
 class PostsController extends Controller
@@ -18,20 +19,23 @@ class PostsController extends Controller
   }
 
 
-  public function form () {
-    return view('posts.create');
+  public function form (Categoria $categoria) {
+    $categorias = Categoria::all();
+    return view('posts.create', compact('categorias'));
   }
 
 
   public function store(Request $request) {
     $dataForm = $request->all();
 
+    $dataForm['user_id'] = auth()->user()->id;
+
     if ($request->hasFile('imagem')) {
       $imagem = $request->file('imagem');
       $imagemName = uniqid(date('YmdHis')).'.'.$imagem->getClientOriginalExtension();
       $dataForm['imagem'] = $imagemName;
       $upload = $imagem->storeAs('posts', $imagemName);
-    }
+    }    
 
     $insert = Post::create($dataForm);
 

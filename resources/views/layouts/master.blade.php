@@ -47,14 +47,15 @@
           <li class="menu-active"><a href="{{ route('homepage') }}">Home</a></li>
           <li><a href="#about">Sobre</a></li>
           <li><a href="#services">Serviços</a></li>
+
           <li class="menu-has-children"><a href="{{ route('noticias') }}">Notícias</a>
             <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-              <li><a href="#">Drop Down 5</a></li>
+              <li><a href="{{ route('dicas') }}">Dicas</a></li>
+              <li><a href="">Informática</a></li>
             </ul>
           </li>
+
+
           <li><a href="#contact">Contato</a></li>
           @if (Auth::check())
           @else

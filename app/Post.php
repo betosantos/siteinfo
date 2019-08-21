@@ -15,6 +15,8 @@ class Post extends Model
     'imagem',
   ];
 
-
+  public function categoria() {
+    return $this->belongsTo(Categoria::class);
+  }
 
 }

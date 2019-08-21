@@ -13,6 +13,10 @@ Route::post('assinar','NewsletterController@assinar')->name('assinar');
 Route::get('profile','UsersController@profile')->name('profile');
 
 
+/* Noticias */
+Route::get('dicas/2','HomeController@dicas')->name('dicas');
+
+
 
 Route::get('posts','PostsController@list')->name('posts.list');
 Route::get('posts/form','PostsController@form')->name('posts.form');

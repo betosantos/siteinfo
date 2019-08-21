@@ -17,7 +17,7 @@
   <table class="table">
     <thead>
       <tr>
-        <th scope="col"></th>
+        <th scope="col">Imagem</th>
         <th scope="col">Título</th>
         <th scope="col">Descrição</th>
         <th scope="col">Ações</th>
@@ -27,7 +27,7 @@
     <tbody>
       <tr>
         <!-- <th scope="row">1</th> -->
-        <td>
+        <td style="width:30px;">
           @if ($post['imagem'])
           <img src="{{ asset('uploads/posts/'.$post->imagem) }}" width="80" height="80">
           @else
@@ -35,11 +35,11 @@
           @endif
         </td>
         <!-- <img src={{ asset('uploads/posts/'.$post->imagem) }}></td> -->
-        <td>{{ $post->titulo }}</td>
+        <td style="width:230px;"><a href="#">{{ $post->titulo }}</a></td>
         <td>{{ $post->descricao }}</td>
-        <td>
-          <th><a href="#"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a></th>
-          <th><a href="#"><i class="fa fa-times fa-lg" aria-hidden="true"></i></a></th>
+        <td style="width:20px;">
+          <a href="#"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+          <a href="#"><i class="fa fa-times fa-lg" aria-hidden="true"></i></a>
         </td>
       </tr>
       @endforeach

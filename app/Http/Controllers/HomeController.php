@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
+use App\Categoria;
 
 class HomeController extends Controller
 {
@@ -16,16 +17,26 @@ class HomeController extends Controller
 
   public function index()  {
     $posts = Post::orderBy('created_at','desc')->take(6)->get();
-    return view('home.index', compact('posts'));
+    $categorias = Categoria::orderBy('nome');
+    return view('home.index', compact('posts','categorias'));
   }
 
   public function homepage()  {
     $posts = Post::orderBy('created_at','desc')->take(6)->get();
-    return view('home.index', compact('posts'));
+    $categorias = Categoria::orderBy('nome');
+    return view('home.index', compact('posts','categorias'));
   }
 
   public function logar()  {
     return view('auth.login');
+  }
+
+
+  public function dicas($id=2)  {
+    $categoria = Categoria::find($id);
+    $dicas = $categoria->posts()->get();
+    return view('noticias.dicas', compact('categoria','dicas'));
+
   }
 
 

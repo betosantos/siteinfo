@@ -4,6 +4,9 @@
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+
+Route::get('noticia/detalhe/categoria/{id}','HomeController@detalhebycat');
+Route::get('noticia/detalhe/{id}','NoticiasController@detalhes')->name('noticia.detalhe');
 Route::get('noticias','NoticiasController@index')->name('noticias');
 
 Route::post('send','PostsController@send');
@@ -15,6 +18,7 @@ Route::get('profile','UsersController@profile')->name('profile');
 
 /* Noticias */
 Route::get('dicas/2','HomeController@dicas')->name('dicas');
+Route::get('informatica/1','HomeController@informatica')->name('informatica');
 
 
 

@@ -48,10 +48,8 @@
           <li><a href="{{ url('home') }}#services">Serviços</a></li>
           <li class="menu-has-children"><a href="{{ route('noticias') }}">Notícias</a>
             <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-              <li><a href="#">Drop Down 5</a></li>
+              <li><a href="{{ route('dicas') }}">Dicas</a></li>
+              <li><a href="">Informática</a></li>
             </ul>
           </li>
           <li><a href="{{ url('home') }}#contact">Contato</a></li>
@@ -72,7 +70,7 @@
   </div>
 </div> -->
 <header class="section-header">
-  <h3>Notícias da Categorias {{ $categoria->nome }}</h3>
+  <h3>Notícias Categoria {{ $categoria->nome }}</h3>
 </header>
 
 <!-- Heading Row -->
@@ -95,13 +93,20 @@
   <div class="col-md-4 mb-5">
     <div class="card h-100">
       <div class="card-body">
-        <img class="img-fluid rounded mb-4 mb-lg-0" src="http://placehold.it/900x400" alt="" >
-        <h2 class="card-title">{{ $dica->titulo }}</h2>
-        <p class="card-text">{{ $dica->descricao }}</p>
+        <!-- Preview Image -->
+        @if ($dica['imagem'])
+        <img class="img-fluid rounded" src="{{ asset('uploads/posts/'.$dica->imagem) }}" class="card-img-top" alt="card">
+        @else
+        <img class="img-fluid rounded" src="{{ asset('uploads/posts/padrao.jpeg') }}" width="286" height="178">
+        @endif
+        <hr>
+
+        <h2 class="card-title">{{ str_limit($dica->titulo,30) }}</h2>
+        <p class="card-text">{{ str_limit($dica->descricao,90) }}</p>
       </div>
       <center>
         <div class="card-footer">
-          <a href="#" class="btn btn-primary btn-sm">More Info</a>
+          <a href="{{ url('noticia/detalhe/categoria/'.$dica->id) }}" class="btn btn-primary btn-sm">Detalhes</a>
         </div>
       </center>
     </div>
@@ -115,72 +120,6 @@
 <!-- /.container -->
 
 
-
-<!--==========================
-Footer
-============================-->
-<!-- <footer id="footer">
-<div class="footer-top">
-<div class="container">
-<div class="row">
-
-<div class="col-lg-3 col-md-6 footer-info">
-<h3>SiteInfo</h3>
-<p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus. Scelerisque felis imperdiet proin fermentum leo. Amet volutpat consequat mauris nunc congue.</p>
-</div>
-
-<div class="col-lg-3 col-md-6 footer-links">
-<h4>Useful Links</h4>
-<ul>
-<li><i class="ion-ios-arrow-right"></i> <a href="{{ url('home') }}">Home</a></li>
-<li><i class="ion-ios-arrow-right"></i> <a href="{{ url('home') }}#about">Sobre</a></li>
-<li><i class="ion-ios-arrow-right"></i> <a href="{{ url('home') }}#services">Serviços</a></li>
-<li><i class="ion-ios-arrow-right"></i> <a href="{{ url('noticias') }}">Notícias</a></li>
-<li><i class="ion-ios-arrow-right"></i> <a href="{{ url('home') }}#contact">Contato</a></li>
-</ul>
-</div>
-
-<div class="col-lg-3 col-md-6 footer-contact">
-<h4>Contact Us</h4>
-<p>
-A108 Adam Street <br>
-New York, NY 535022<br>
-United States <br>
-<strong>Phone:</strong> +1 5589 55488 55<br>
-<strong>Email:</strong> info@example.com<br>
-</p>
-
-<div class="social-links">
-<a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-<a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-<a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-<a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
-<a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-</div>
-
-</div>
-
-<div class="col-lg-3 col-md-6 footer-newsletter">
-<h4>Our Newsletter</h4>
-<p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna veniam enim veniam illum dolore legam minim quorum culpa amet magna export quem marada parida nodela caramase seza.</p>
-<form action="" method="post">
-<input type="email" name="email"><input type="submit"  value="Subscribe">
-</form>
-</div>
-
-</div>
-</div>
-</div>
-
-<div class="container">
-<div class="copyright">
-&copy; <strong>SiteInfo</strong>. Todos os direitos reservados.
-</div>
-<div class="credits">
-Desenvolvido por: <a href="http://www.siteinfo.com.br/">José Roberto Oliveira</a>
-</div>
-</div>
-</footer> -->
 
 @include('layouts/rodape')
 

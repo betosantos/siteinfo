@@ -294,19 +294,25 @@ Portfolio Section
       @foreach($posts as $post)
       <div class="col-lg-4">
         <div class="card" style="width: 18rem; margin-top:15px;">
-          <img src="{{ asset('img/portfolio/web1.jpg') }}" class="card-img-top" alt="card">
+
+          @if ($post['imagem'])
+          <img src="{{ asset('uploads/posts/'.$post->imagem) }}" class="card-img-top" alt="card">
+          @else
+          <img src="{{ asset('uploads/posts/padrao.jpeg') }}" width="286" height="178">
+          @endif
+
           <div class="card-body">
-            <h5 class="card-title"><b>{{ $post->titulo }}</b></h5>
-            <p class="card-text">{{ $post->descricao }}</p>
+            <h5 class="card-title"><b>{{ str_limit($post->titulo, 55) }}</b></h5>
+            <p class="card-text">{{ str_limit($post->descricao, 60) }}</p>
             <p class="card-text"><b>Criado em: {{ date('d/m/Y', strtotime($post->created_at)) }}</b></p>
-            <center><a href="#" class="btn btn-primary">Detalhes</a></center>
+            <center><a href="{{ asset('noticia/detalhe/'.$post->id) }}" class="btn btn-primary">Detalhes</a></center>
           </div>
         </div>
       </div>
       @endforeach
     </div><!-- FIM DA ROW -->
     <br/>
-    <a href="#">Ver Notícias</a>
+    <a href="{{ route('noticias') }}">Ver todas as Notícias >>></a>
   </div>
 </div>
 </section><!-- #portfolio -->

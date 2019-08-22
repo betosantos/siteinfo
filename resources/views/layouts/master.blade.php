@@ -51,7 +51,7 @@
           <li class="menu-has-children"><a href="{{ route('noticias') }}">Notícias</a>
             <ul>
               <li><a href="{{ route('dicas') }}">Dicas</a></li>
-              <li><a href="">Informática</a></li>
+              <li><a href="{{ route('informatica') }}">Informática</a></li>
             </ul>
           </li>
 

@@ -36,8 +36,20 @@ class HomeController extends Controller
     $categoria = Categoria::find($id);
     $dicas = $categoria->posts()->get();
     return view('noticias.dicas', compact('categoria','dicas'));
-
   }
+
+
+  public function detalhebycat($id) {
+    $postbycat = Post::find($id);
+    return view('noticias.bycat', compact('postbycat'));
+  }
+
+  public function informatica($id=1) {
+    $categoria = Categoria::find($id);
+    $infos = $categoria->posts()->get();
+    return view('noticias.informatica', compact('infos', 'categoria'));
+  }
+
 
 
 

@@ -48,10 +48,8 @@
           <li><a href="{{ url('home') }}#services">Serviços</a></li>
           <li class="menu-has-children"><a href="{{ route('noticias') }}">Notícias</a>
             <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-              <li><a href="#">Drop Down 5</a></li>
+              <li><a href="{{ route('dicas') }}">Dicas</a></li>
+              <li><a href="{{ route('informatica') }}">Informática</a></li>
             </ul>
           </li>
           <li><a href="{{ url('home') }}#contact">Contato</a></li>

@@ -44,20 +44,23 @@
       <nav id="nav-menu-container">
         <ul class="nav-menu">
           <li class="menu-active"><a href="{{ route('homepage') }}">Home</a></li>
-          <li><a href="#about">Sobre</a></li>
-          <li><a href="#services">Serviços</a></li>
-          <li><a href="#portfolio">Notícias</a></li>
-          <!-- <li class="menu-has-children"><a href="">Drop Down</a>
-          <ul>
-          <li><a href="#">Drop Down 1</a></li>
-          <li><a href="#">Drop Down 3</a></li>
-          <li><a href="#">Drop Down 4</a></li>
-          <li><a href="#">Drop Down 5</a></li>
+          <li><a href="{{ url('/')}}/#about">Sobre</a></li>
+          <li><a href="{{ url('/')}}/#services">Serviços</a></li>
+
+          <li class="menu-has-children"><a href="{{ route('noticias') }}">Notícias</a>
+            <ul>
+              <li><a href="{{ route('dicas') }}">Dicas</a></li>
+              <li><a href="{{ route('informatica') }}">Informática</a></li>
+            </ul>
+          </li>
+
+
+          <li><a href="{{ url('/')}}/#contact">Contato</a></li>
+          @if (Auth::check())
+          @else
+          <li><a href="{{ route('logar') }}">Login</a></li>
+          @endif
         </ul>
-      </li> -->
-      <li><a href="#contact">Contato</a></li>
-      <li><a href="{{ route('logar') }}">Login</a></li>
-    </ul>
   </nav><!-- #nav-menu-container -->
 </div>
 </header><!-- #header -->

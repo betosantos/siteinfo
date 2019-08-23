@@ -1,70 +1,48 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <title>SiteInfo Tecnologia da Informação</title>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta content="" name="keywords">
-  <meta content="" name="description">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-146276745-1"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-  <!-- Favicons -->
-  <link href="{{ asset('img/favicon.png') }}" rel="icon">
-  <link href="{{ asset('img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+  gtag('config', 'UA-146276745-1');
+</script>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
+<meta charset="utf-8">
+<title>SiteInfo Tecnologia da Informação</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="" name="keywords">
+<meta content="" name="description">
 
-  <!-- Bootstrap CSS File -->
-  <link href="{{ asset('lib/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+<!-- Favicons -->
+<link href="{{ asset('img/favicon.png') }}" rel="icon">
+<link href="{{ asset('img/apple-touch-icon.png') }}" rel="apple-touch-icon">
 
-  <!-- Libraries CSS Files -->
-  <link href="{{ asset('lib/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
-  <link href="{{ asset('lib/animate/animate.min.css') }}" rel="stylesheet">
-  <link href="{{ asset('lib/ionicons/css/ionicons.min.css') }}" rel="stylesheet">
-  <link href="{{ asset('lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
-  <link href="{{ asset('lib/lightbox/css/lightbox.min.css') }}" rel="stylesheet">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
 
-  <!-- Main Stylesheet File -->
-  <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+<!-- Bootstrap CSS File -->
+<link href="{{ asset('lib/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+
+<!-- Libraries CSS Files -->
+<link href="{{ asset('lib/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
+<link href="{{ asset('lib/animate/animate.min.css') }}" rel="stylesheet">
+<link href="{{ asset('lib/ionicons/css/ionicons.min.css') }}" rel="stylesheet">
+<link href="{{ asset('lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
+<link href="{{ asset('lib/lightbox/css/lightbox.min.css') }}" rel="stylesheet">
+
+<!-- Main Stylesheet File -->
+<link href="{{ asset('css/style.css') }}" rel="stylesheet">
 
 </head>
 
 <body>
-  <!--==========================
-  Header
-  ============================-->
-  <header id="header">
-    <div class="container-fluid">
-
-      <div id="logo" class="pull-left">
-        <h1><a href="{{ route('homepage') }}" class="">SiteInfo</a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="#intro"><img src="img/logo.png" alt="" title="" /></a>-->
-      </div>
-
-      <nav id="nav-menu-container">
-        <ul class="nav-menu">
-          <li class="menu-active"><a href="{{ route('homepage') }}">Home</a></li>
-          <li><a href="#about">Sobre</a></li>
-          <li><a href="#services">Serviços</a></li>
-
-          <li class="menu-has-children"><a href="{{ route('noticias') }}">Notícias</a>
-            <ul>
-              <li><a href="{{ route('dicas') }}">Dicas</a></li>
-              <li><a href="{{ route('informatica') }}">Informática</a></li>
-            </ul>
-          </li>
 
 
-          <li><a href="#contact">Contato</a></li>
-          @if (Auth::check())
-          @else
-          <li><a href="{{ route('logar') }}">Login</a></li>
-          @endif
-        </ul>
-      </nav><!-- #nav-menu-container -->
-    </div>
-  </header><!-- #header -->
+  @include('layouts/navbar')
 
   <!--==========================
   Content

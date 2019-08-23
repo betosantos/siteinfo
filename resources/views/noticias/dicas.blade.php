@@ -49,7 +49,7 @@
           <li class="menu-has-children"><a href="{{ route('noticias') }}">Notícias</a>
             <ul>
               <li><a href="{{ route('dicas') }}">Dicas</a></li>
-              <li><a href="">Informática</a></li>
+              <li><a href="{{ route('informatica') }}">Informática</a></li>
             </ul>
           </li>
           <li><a href="{{ url('home') }}#contact">Contato</a></li>
@@ -59,65 +59,97 @@
     </div>
   </header><!-- #header -->
 
-  <!--Noticias -->
-  <div class="container" style="margin-top:110px; margin-bottom:40px;">
+
+  <header class="section-header" style="margin-top:110px;">
+    <h3>Notícias Categoria {{ $categoria->nome }}</h3>
+  </header>
 
 
-    <!-- Call to Action Well -->
-    <!-- <div class="card text-white bg-secondary my-5 py-4 text-center">
-    <div class="card-body">
-    <p class="text-white m-0">This call to action card is a great place to showcase some important information or display a clever tagline!</p>
-  </div>
-</div> -->
-<header class="section-header">
-  <h3>Notícias Categoria {{ $categoria->nome }}</h3>
-</header>
-
-<!-- Heading Row -->
-<!-- <div class="row align-items-center my-5">
-<div class="col-lg-7">
-<img class="img-fluid rounded mb-4 mb-lg-0" src="http://placehold.it/900x400" alt="">
-</div>
-<div class="col-lg-5">
-<h1 class="font-weight-light">Business Name or Tagline</h1>
-<p>This is a template that is great for small businesses. It doesn't have too much fancy flare to it, but it makes a great use of the standard Bootstrap core components. Feel free to use this template for any project you want!</p>
-<a class="btn btn-primary" href="#">Call to Action!</a>
-</div>
-</div> -->
-<!-- /.row -->
+  <!--Noticia -->
+  <div class="container">
 
 
-<!-- Content Row -->
-<div class="row">
-  @foreach($dicas as $dica)
-  <div class="col-md-4 mb-5">
-    <div class="card h-100">
-      <div class="card-body">
-        <!-- Preview Image -->
-        @if ($dica['imagem'])
-        <img class="img-fluid rounded" src="{{ asset('uploads/posts/'.$dica->imagem) }}" class="card-img-top" alt="card">
-        @else
-        <img class="img-fluid rounded" src="{{ asset('uploads/posts/padrao.jpeg') }}" width="286" height="178">
-        @endif
-        <hr>
+    <!-- Page Content -->
+    <div class="row">
+      <!-- Post Content Column -->
+      <div class="col-lg-8">
+        <div class="row" style="margin-bottom:20px;">
+          @foreach($dicas as $dica)
+          <div class="col-lg-6">
+            <div class="card" style="margin-top:15px;">
+              <!-- Preview Image -->
+              @if ($dica['imagem'])
+              <img class="img-fluid rounded" src="{{ asset('uploads/posts/'.$dica->imagem) }}" class="card-img-top" alt="card">
+              @else
+              <img class="img-fluid rounded" src="{{ asset('uploads/posts/padrao.jpeg') }}" width="286" height="178">
+              @endif
+              <div class="card-body">
+                <h5 class="card-title"><b>{{ str_limit($dica->titulo,70) }}</b></h5>
+                <p class="card-text"><b>Criado em: {{ date('d/m/Y', strtotime($dica->created_at)) }} </b></p>
+                <center><a href="#" class="btn btn-primary">Detalhes</a></center>
+              </div>
+            </div>
+          </div>
+          @endforeach
 
-        <h2 class="card-title">{{ str_limit($dica->titulo,30) }}</h2>
-        <p class="card-text">{{ str_limit($dica->descricao,90) }}</p>
+
+        </div><!-- FIM DA ROW -->
       </div>
-      <center>
-        <div class="card-footer">
-          <a href="{{ url('noticia/detalhe/categoria/'.$dica->id) }}" class="btn btn-primary btn-sm">Detalhes</a>
-        </div>
-      </center>
-    </div>
-  </div>
-  @endforeach
 
+      <!-- Sidebar Widgets Column -->
+      <div class="col-md-4">
+        <!-- Search Widget -->
+        <div class="card my-4">
+          <h5 class="card-header text-white bg-primary">Buscar</h5>
+          <div class="card-body">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Buscar por...">
+              <span class="input-group-btn">
+                <button class="btn btn-secondary" type="button">Buscar</button>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Categories Widget -->
+        <div class="card my-4">
+          <h5 class="card-header text-white bg-primary">Categorias Notícias</h5>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul class="list-unstyled mb-0">
+                  <li>
+                    <a href="{{ route('dicas') }}">Dicas</a>
+                  </li>
+
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <ul class="list-unstyled mb-0">
+                  <li>
+                    <a href="{{ route('informatica') }}">Informática</a>
+                  </li>
+
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Side Widget -->
+        <!-- <div class="card my-4">
+        <h5 class="card-header">Side Widget</h5>
+        <div class="card-body">
+        You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!
+      </div>
+    </div> -->
+  </div>
 </div>
 <!-- /.row -->
 
 </div>
-<!-- /.container -->
+
+
 
 
 

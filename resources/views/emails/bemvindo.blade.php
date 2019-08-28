@@ -1,690 +1,822 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>[SUBJECT]</title>
-  <style type="text/css">
+  <meta charset="utf-8"> <!-- utf-8 works for most cases -->
+  <meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
+  <meta name="x-apple-disable-message-reformatting">  <!-- Disable auto-scale in iOS 10 Mail entirely -->
+  <title></title> <!-- The title tag shows in email notifications, like Android 4.4. -->
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+
+  <!-- CSS Reset : BEGIN -->
+  <style>
+  html,
   body {
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
-    margin:0 !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    height: 100% !important;
     width: 100% !important;
-    -webkit-text-size-adjust: 100% !important;
-    -ms-text-size-adjust: 100% !important;
-    -webkit-font-smoothing: antialiased !important;
-  }
-  .tableContent img {
-    border: 0 !important;
-    display: block !important;
-    outline: none !important;
-  }
-  a{
-    color:#382F2E;
+    background: #f1f1f1;
   }
 
-  p, h1,h2,ul,ol,li,div{
-    margin:0;
-    padding:0;
+  /* What it does: Stops email clients resizing small text. */
+  * {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
   }
 
-  h1,h2{
-    font-weight: normal;
-    background:transparent !important;
-    border:none !important;
+  /* What it does: Centers email on Android 4.4 */
+  div[style*="margin: 16px 0"] {
+    margin: 0 !important;
   }
 
-  @media only screen and (max-width:480px)
-
-  {
-
-    table[class="MainContainer"], td[class="cell"]
-    {
-      width: 100% !important;
-      height:auto !important;
-    }
-    td[class="specbundle"]
-    {
-      width: 100% !important;
-      float:left !important;
-      font-size:13px !important;
-      line-height:17px !important;
-      display:block !important;
-      padding-bottom:15px !important;
-    }
-    td[class="specbundle2"]
-    {
-      width:80% !important;
-      float:left !important;
-      font-size:13px !important;
-      line-height:17px !important;
-      display:block !important;
-      padding-bottom:10px !important;
-      padding-left:10% !important;
-      padding-right:10% !important;
-    }
-
-    td[class="spechide"]
-    {
-      display:none !important;
-    }
-    img[class="banner"]
-    {
-      width: 100% !important;
-      height: auto !important;
-    }
-    td[class="left_pad"]
-    {
-      padding-left:15px !important;
-      padding-right:15px !important;
-    }
-
+  /* What it does: Stops Outlook from adding extra spacing to tables. */
+  table,
+  td {
+    mso-table-lspace: 0pt !important;
+    mso-table-rspace: 0pt !important;
   }
 
-  @media only screen and (max-width:540px)
-
-  {
-
-    table[class="MainContainer"], td[class="cell"]
-    {
-      width: 100% !important;
-      height:auto !important;
-    }
-    td[class="specbundle"]
-    {
-      width: 100% !important;
-      float:left !important;
-      font-size:13px !important;
-      line-height:17px !important;
-      display:block !important;
-      padding-bottom:15px !important;
-    }
-    td[class="specbundle2"]
-    {
-      width:80% !important;
-      float:left !important;
-      font-size:13px !important;
-      line-height:17px !important;
-      display:block !important;
-      padding-bottom:10px !important;
-      padding-left:10% !important;
-      padding-right:10% !important;
-    }
-
-    td[class="spechide"]
-    {
-      display:none !important;
-    }
-    img[class="banner"]
-    {
-      width: 100% !important;
-      height: auto !important;
-    }
-    td[class="left_pad"]
-    {
-      padding-left:15px !important;
-      padding-right:15px !important;
-    }
-
+  /* What it does: Fixes webkit padding issue. */
+  table {
+    border-spacing: 0 !important;
+    border-collapse: collapse !important;
+    table-layout: fixed !important;
+    margin: 0 auto !important;
   }
 
-  .contentEditable h2.big,.contentEditable h1.big{
-    font-size: 26px !important;
+  /* What it does: Uses a better rendering method when resizing images in IE. */
+  img {
+    -ms-interpolation-mode:bicubic;
   }
 
-  .contentEditable h2.bigger,.contentEditable h1.bigger{
-    font-size: 37px !important;
-  }
-
-  td,table{
-    vertical-align: top;
-  }
-  td.middle{
-    vertical-align: middle;
-  }
-
-  a.link1{
-    font-size:13px;
-    color:#27A1E5;
-    line-height: 24px;
-    text-decoration:none;
-  }
-  a{
+  /* What it does: Prevents Windows 10 Mail from underlining links despite inline CSS. Styles for underlined links should be inline. */
+  a {
     text-decoration: none;
   }
 
-  .link2{
-    color:#ffffff;
-    border-top:10px solid #27A1E5;
-    border-bottom:10px solid #27A1E5;
-    border-left:18px solid #27A1E5;
-    border-right:18px solid #27A1E5;
-    border-radius:3px;
-    -moz-border-radius:3px;
-    -webkit-border-radius:3px;
-    background:#27A1E5;
+  /* What it does: A work-around for email clients meddling in triggered links. */
+  *[x-apple-data-detectors],  /* iOS */
+  .unstyle-auto-detected-links *,
+  .aBn {
+    border-bottom: 0 !important;
+    cursor: default !important;
+    color: inherit !important;
+    text-decoration: none !important;
+    font-size: inherit !important;
+    font-family: inherit !important;
+    font-weight: inherit !important;
+    line-height: inherit !important;
   }
 
-  .link3{
-    color:#555555;
-    border:1px solid #cccccc;
-    padding:10px 18px;
-    border-radius:3px;
-    -moz-border-radius:3px;
-    -webkit-border-radius:3px;
-    background:#ffffff;
+  /* What it does: Prevents Gmail from displaying a download button on large, non-linked images. */
+  .a6S {
+    display: none !important;
+    opacity: 0.01 !important;
   }
 
-  .link4{
-    color:#27A1E5;
-    line-height: 24px;
+  /* What it does: Prevents Gmail from changing the text color in conversation threads. */
+  .im {
+    color: inherit !important;
   }
 
-  h2,h1{
-    line-height: 20px;
-  }
-  p{
-    font-size: 14px;
-    line-height: 21px;
-    color:#AAAAAA;
+  /* If the above doesn't work, add a .g-img class to any image in question. */
+  img.g-img + div {
+    display: none !important;
   }
 
-  .contentEditable li{
+  /* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
+  /* Create one of these media queries for each additional viewport size you'd like to fix */
 
+  /* iPhone 4, 4S, 5, 5S, 5C, and 5SE */
+  @media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
+    u ~ div .email-container {
+      min-width: 320px !important;
+    }
   }
-
-  .appart p{
-
+  /* iPhone 6, 6S, 7, 8, and X */
+  @media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
+    u ~ div .email-container {
+      min-width: 375px !important;
+    }
   }
-  .bgItem{
-    background: #ffffff;
-  }
-  .bgBody{
-    background: #ffffff;
-  }
-
-  img {
-    outline:none;
-    text-decoration:none;
-    -ms-interpolation-mode: bicubic;
-    width: auto;
-    max-width: 100%;
-    clear: both;
-    display: block;
-    float: none;
+  /* iPhone 6+, 7+, and 8+ */
+  @media only screen and (min-device-width: 414px) {
+    u ~ div .email-container {
+      min-width: 414px !important;
+    }
   }
 
 </style>
 
+<!-- CSS Reset : END -->
 
-<script type="colorScheme" class="swatch active">
-{
-  "name":"Default",
-  "bgBody":"ffffff",
-  "link":"27A1E5",
-  "color":"AAAAAA",
-  "bgItem":"ffffff",
-  "title":"444444"
+<!-- Progressive Enhancements : BEGIN -->
+<style>
+
+.primary{
+  background: #0d0cb5;
 }
-</script>
+.bg_white{
+  background: #ffffff;
+}
+.bg_light{
+  background: #fafafa;
+}
+.bg_black{
+  background: #000000;
+}
+.bg_dark{
+  background: rgba(0,0,0,.8);
+}
+.email-section{
+  padding:2.5em;
+}
+
+/*BUTTON*/
+.btn{
+  padding: 5px 15px;
+  display: inline-block;
+}
+.btn.btn-primary{
+  border-radius: 5px;
+  background: #0d0cb5;
+  color: #ffffff;
+}
+.btn.btn-white{
+  border-radius: 5px;
+  background: #ffffff;
+  color: #000000;
+}
+.btn.btn-white-outline{
+  border-radius: 5px;
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Poppins', sans-serif;
+  color: #000000;
+  margin-top: 0;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.8;
+  color: rgba(0,0,0,.4);
+}
+
+a{
+  color: #0d0cb5;
+}
+
+table{
+}
+/*LOGO*/
+
+.logo h1{
+  margin: 0;
+}
+.logo h1 a{
+  color: #000000;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+}
+
+.navigation{
+  padding: 0;
+}
+.navigation li{
+  list-style: none;
+  display: inline-block;;
+  margin-left: 5px;
+  font-size: 13px;
+  font-weight: 500;
+}
+.navigation li a{
+  color: rgba(0,0,0,.4);
+}
+
+/*HERO*/
+.hero{
+  position: relative;
+  z-index: 0;
+}
+.hero .overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: '';
+  width: 100%;
+  background: #000000;
+  z-index: -1;
+  opacity: .3;
+}
+.hero .icon{
+}
+.hero .icon a{
+  display: block;
+  width: 60px;
+  margin: 0 auto;
+}
+.hero .text{
+  color: rgba(255,255,255,.8);
+}
+.hero .text h2{
+  color: #ffffff;
+  font-size: 30px;
+  margin-bottom: 0;
+}
+
+
+/*HEADING SECTION*/
+.heading-section{
+}
+.heading-section h2{
+  color: #000000;
+  font-size: 20px;
+  margin-top: 0;
+  line-height: 1.4;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.heading-section .subheading{
+  margin-bottom: 20px !important;
+  display: inline-block;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: rgba(0,0,0,.4);
+  position: relative;
+}
+.heading-section .subheading::after{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -10px;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: #0d0cb5;
+  margin: 0 auto;
+}
+
+.heading-section-white{
+  color: rgba(255,255,255,.8);
+}
+.heading-section-white h2{
+  font-family:
+  line-height: 1;
+  padding-bottom: 0;
+}
+.heading-section-white h2{
+  color: #ffffff;
+}
+.heading-section-white .subheading{
+  margin-bottom: 0;
+  display: inline-block;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: rgba(255,255,255,.4);
+}
+
+
+.icon{
+  text-align: center;
+}
+.icon img{
+}
+
+
+/*SERVICES*/
+.services{
+  background: rgba(0,0,0,.03);
+}
+.text-services{
+  padding: 10px 10px 0;
+  text-align: center;
+}
+.text-services h3{
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.services-list{
+  padding: 0;
+  margin: 0 0 20px 0;
+  width: 100%;
+  float: left;
+}
+
+.services-list img{
+  float: left;
+}
+.services-list .text{
+  width: calc(100% - 60px);
+  float: right;
+}
+.services-list h3{
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.services-list p{
+  margin: 0;
+}
+
+/*BLOG*/
+.text-services .meta{
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+/*TESTIMONY*/
+.text-testimony .name{
+  margin: 0;
+}
+.text-testimony .position{
+  color: rgba(0,0,0,.3);
+
+}
+
+
+/*VIDEO*/
+.img{
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+.img .icon{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin-top: -25px;
+}
+.img .icon a{
+  display: block;
+  width: 60px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -25px;
+}
+
+
+
+/*COUNTER*/
+.counter{
+  width: 100%;
+  position: relative;
+  z-index: 0;
+}
+.counter .overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: '';
+  width: 100%;
+  background: #000000;
+  z-index: -1;
+  opacity: .3;
+}
+.counter-text{
+  text-align: center;
+}
+.counter-text .num{
+  display: block;
+  color: #ffffff;
+  font-size: 34px;
+  font-weight: 700;
+}
+.counter-text .name{
+  display: block;
+  color: rgba(255,255,255,.9);
+  font-size: 13px;
+}
+
+
+/*FOOTER*/
+
+.footer{
+  color: rgba(255,255,255,.5);
+
+}
+.footer .heading{
+  color: #ffffff;
+  font-size: 20px;
+}
+.footer ul{
+  margin: 0;
+  padding: 0;
+}
+.footer ul li{
+  list-style: none;
+  margin-bottom: 10px;
+}
+.footer ul li a{
+  color: rgba(255,255,255,1);
+}
+
+
+@media screen and (max-width: 500px) {
+
+  .icon{
+    text-align: left;
+  }
+
+  .text-services{
+    padding-left: 0;
+    padding-right: 20px;
+    text-align: left;
+  }
+
+}
+</style>
 
 
 </head>
-<body paddingwidth="0" paddingheight="0" bgcolor="#d1d3d4"  style="padding-top: 0; padding-bottom: 0; padding-top: 0; padding-bottom: 0; background-repeat: repeat; width: 100% !important; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; -webkit-font-smoothing: antialiased;" offset="0" toppadding="0" leftpadding="0">
-  <table width="100%" border="0" cellspacing="0" cellpadding="0">
-    <tbody>
-      <tr>
-        <td><table width="600" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="#ffffff" style="font-family:helvetica, sans-serif;" class="MainContainer">
-          <!-- =============== START HEADER =============== -->
-          <tbody>
-            <tr>
-              <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
-                <tbody>
-                  <tr>
-                    <td valign="top" width="20">&nbsp;</td>
-                    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
-                      <tbody>
-                        <tr>
-                          <td class="movableContentContainer">
-                            <div class="movableContent" style="border: 0px; padding-top: 0px; position: relative;">
-                              <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                                <tbody>
-                                  <tr>
-                                    <td height="15"></td>
-                                  </tr>
-                                  <tr>
-                                    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
-                                      <tbody>
-                                        <tr>
-                                          <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
-                                            <tbody>
-                                              <tr>
-                                                <td valign="top" width="60"><img src="images/logo.png" alt="Logo" title="Logo" width="60" height="60" data-max-width="100"></td>
-                                                <td width="10" valign="top">&nbsp;</td>
-                                                <td valign="middle" style='vertical-align: middle;'>
-                                                  <div class='contentEditableContainer contentTextEditable'>
-                                                    <div class='contentEditable' style='text-align: left;font-weight: light; color:#555555;font-size:26;line-height: 39px;font-family: Helvetica Neue;'>
-                                                      <h1 class='big'><a target='_blank' href="[CLIENTS.WEBSITE]" style='color:#444444'>Company</a></h1>
-                                                    </div>
-                                                  </div>
-                                                </td>
-                                              </tr>
-                                            </tbody>
-                                          </table>
-                                        </td>
-                                        <td valign="top" width="90" class="spechide">&nbsp;</td>
-                                        <td valign="middle" style='vertical-align: middle;' width='150'>
-                                          <div class='contentEditableContainer contentTextEditable'>
-                                            <div class='contentEditable' style='text-align: right;'>
-                                              <a target='_blank' href="[SHOWEMAIL]" class='link1' >Open in your browser</a>
-                                            </div>
-                                          </div>
-                                        </td>
-                                      </tr>
-                                    </tbody>
-                                  </table></td>
-                                </tr>
-                                <tr>
-                                  <td height='15'></td>
-                                </tr>
-                                <tr>
-                                  <td ><hr style='height:1px;background:#DDDDDD;border:none;'></td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </div>
-                          <!-- =============== END HEADER =============== -->
-                          <!-- =============== START BODY =============== -->
 
-                          <div class="movableContent" style="border: 0px; padding-top: 0px; position: relative;">
-                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                              <tbody>
-                                <tr>
-                                  <td height="40"></td>
-                                </tr>
-                                <tr>
-                                  <td valign="top" width="580"><div class='contentEditableContainer contentImageEditable'>
-                                    <div class='contentEditable' style="text-align: center;"><img class="banner" src="images/bigImg.png" alt="Logo" title="Logo" width="580" height="221" border="0"></div></div></td>
-                                  </tr>
-                                </tbody>
-                              </table>
-
-
-
-                            </div>
-                            <div class="movableContent" style="border: 0px; padding-top: 0px; position: relative;">
-                              <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                                <tbody>
-                                  <tr>
-                                    <td height='40'></td>
-                                  </tr>
-                                  <tr>
-                                    <td style="border: 1px solid #EEEEEE; border-radius:6px;-moz-border-radius:6px;-webkit-border-radius:6px"><table width="100%" border="0" cellspacing="0" cellpadding="0">
-                                      <tbody>
-                                        <tr>
-                                          <td valign="top" width="40">&nbsp;</td>
-                                          <td><table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
-                                            <tr><td height='25'></td></tr>
-                                            <tr>
-                                              <td>
-                                                <div class='contentEditableContainer contentTextEditable'>
-                                                  <div class='contentEditable' style='text-align: center;'>
-                                                    <h2 style="font-size: 20px;">Obrigado pelo contato {{ $name }} </h2>
-                                                    <br>
-                                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Has been the industry's standard dummy text ever since the 1500s.</p>
-                                                  </div>
-                                                </div>
-                                              </td>
-                                            </tr>
-                                            <tr><td height='24'></td></tr>
-                                          </table></td>
-                                          <td valign="top" width="40">&nbsp;</td>
-                                        </tr>
-                                      </tbody>
-                                    </table>
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>
-
-
-
-                          </div>
-                          <div class="movableContent" style="border: 0px; padding-top: 0px; position: relative;">
-                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                              <tbody>
-                                <tr>
-                                  <td height="40"></td>
-                                </tr>
-                                <tr>
-                                  <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
-                                    <tbody>
-                                      <tr>
-                                        <td class="specbundle"><div class='contentEditableContainer contentTextEditable'>
-                                          <div class='contentEditable' style='text-align: left;'>
-                                            <h2 style="font-size: 20px;">Subtitle</h2>
-                                            <br>
-                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Has been the industry's standard dummy text ever since the 1500s.
-                                            </p>
-                                            <br><br>
-                                            <a target='_blank' href="#" class='link2' style='color:#ffffff'>Call to action</a>
-                                            <br>
-                                          </div>
-                                        </div></td>
-                                        <td valign="top" width="75" class="specbundle">&nbsp;</td>
-                                        <td class="specbundle"><div class='contentEditableContainer contentTextEditable'>
-                                          <div class='contentEditable' style='text-align: left;'>
-                                            <h2 style="font-size: 20px;">Subtitle</h2>
-                                            <br>
-                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Has been the industry's standard dummy text ever since the 1500s.
-                                            </p>
-                                            <br><br>
-                                            <a target='_blank' href="#" class='link2' style='color:#ffffff'>Call to action</a>
-                                            <br>
-                                          </div>
-                                        </div></td>
-                                      </tr>
-                                    </tbody>
-                                  </table>
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
-
-
-
-                        </div>
-                        <div class="movableContent" style="border: 0px; padding-top: 0px; position: relative;">
-                          <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                            <tbody>
-                              <tr>
-                                <td height="40"></td>
-                              </tr>
-                              <tr>
-                                <td style="background:#F6F6F6; border-radius:6px;-moz-border-radius:6px;-webkit-border-radius:6px"><table width="100%" border="0" cellspacing="0" cellpadding="0">
-                                  <tbody>
-                                    <tr>
-                                      <td width="40" valign="top">&nbsp;</td>
-                                      <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
-                                        <tr><td height='25'></td></tr>
-                                        <tr>
-                                          <td>
-                                            <div class='contentEditableContainer contentTextEditable'>
-                                              <div class='contentEditable' style='text-align: center;'>
-                                                <h2 style="font-size: 20px;">Second Feature</h2>
-                                                <br>
-                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Has been the industry's standard dummy text ever since the 1500s.
-                                                </p>
-                                                <br><br>
-                                                <a target='_blank' href="#" class='link3' style='color:#555555;'>Call to action</a>
-                                                <br>
-                                              </div>
-                                            </div>
-                                          </td>
-                                        </tr>
-                                        <tr><td height='24'></td></tr>
-                                      </table></td>
-                                      <td width="40" valign="top">&nbsp;</td>
-                                    </tr>
-                                  </tbody>
-                                </table>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-
-
-
-                      </div>
-                      <div class="movableContent" style="border: 0px; padding-top: 0px; position: relative;">
-                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                          <tbody>
-                            <tr>
-                              <td height="40"></td>
-                            </tr>
-                            <tr>
-                              <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
-                                <tbody>
-                                  <tr>
-                                    <td class="specbundle" valign="top" width="142" align="center"><div class='contentEditableContainer contentImageEditable'>
-                                      <div class='contentEditable'>
-                                        <img src="images/side.png" alt="side image" width='142' height='142' data-default="placeholder" border="0">
-                                      </div>
-                                    </div></td>
-                                    <td width="20" valign="top" class="spechide"></td>
-                                    <td class="specbundle"><table width="100%" cellpadding="0" cellspacing="0" align="center">
-                                      <tr><td height='15'></td></tr>
-                                      <tr>
-                                        <td>
-                                          <div class='contentEditableContainer contentTextEditable'>
-                                            <div class='contentEditable' style='text-align: left;'>
-                                              <h2 style='font-size:16px;'>Sub Feature 1</h2>
-                                              <br>
-                                              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Has been the industry's standard dummy text ever since the 1500s.</p>
-                                              <br>
-                                              <a target='_blank' href="#" class='link4' style='color:#27A1E5;' >read more</a>
-                                            </div>
-                                          </div>
-                                        </td>
-                                      </tr>
-                                    </table></td>
-                                  </tr>
-                                </tbody>
-                              </table>
+<body width="100%" style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly; background-color: #222222;">
+  <center style="width: 100%; background-color: #f1f1f1;">
+    <div style="display: none; font-size: 1px;max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: sans-serif;">
+      &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+    </div>
+    <div style="max-width: 600px; margin: 0 auto;" class="email-container">
+      <!-- BEGIN BODY -->
+      <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
+        <tr>
+          <td valign="top" class="bg_white" style="padding: 1em 2.5em;">
+            <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr>
+                <td width="40%" class="logo" style="text-align: left;">
+                  <h1><a href="#">SiteInfo</a></h1>
+                </td>
+                <td width="60%" class="logo" style="text-align: right;">
+                  <ul class="navigation">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Serviços</a></li>
+                    <li><a href="#">Notícias</a></li>
+                    <li><a href="#">Contato</a></li>
+                  </ul>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr><!-- end tr -->
+        <tr>
+          <td valign="middle" class="hero bg_white" style="background-image: url(images/bg_1.jpg); background-size: cover; height: 400px;">
+            <div class="overlay"></div>
+            <table>
+              <tr>
+                <td>
+                  <div class="text" style="padding: 0 3em; text-align: center;">
+                    <h2>Bem-Vindo "NOME"</h2>
+                    <p>.</p>
+                    <div class="icon">
+                      <a href="#">
+                        <img src="images/002-play-button.png" alt="" style="width: 60px; max-width: 600px; height: auto; margin: auto; display: block;">
+                      </a>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr><!-- end tr -->
+        <tr>
+          <td class="bg_white">
+            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+              <tr>
+                <td class="bg_white email-section">
+                  <div class="heading-section" style="text-align: center; padding: 0 30px;">
+                    <h2>Serviços</h2>
+                    <p>Vamos transoformar idéias em valores.</p>
+                  </div>
+                  <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tr>
+                      <td valign="top" width="33.333%" style="padding-top: 20px;" class="services">
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                          <tr>
+                            <td class="icon">
+                              <img src="images/001-diet.png" alt="" style="width: 60px; max-width: 600px; height: auto; margin: auto; display: block;">
                             </td>
                           </tr>
-                        </tbody>
-                      </table>
-
-
-
-                    </div>
-                    <div class="movableContent" style="border: 0px; padding-top: 0px; position: relative;">
-                      <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                        <tbody>
                           <tr>
-                            <td height="40"></td>
+                            <td class="text-services">
+                              <h3>Consultoria</h3>
+                              <p>Mais de 10 anos de experiência atuando na área de tecnologia da informação</p>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                      <td valign="top" width="33.333%" style="padding-top: 20px; background: rgba(0,0,0,.08);" class="services">
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                          <tr>
+                            <td class="icon">
+                              <img src="images/001-diet.png" alt="" style="width: 60px; max-width: 600px; height: auto; margin: auto; display: block;">
+                            </td>
                           </tr>
                           <tr>
-                            <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
-                              <tbody>
-                                <tr>
-                                  <td valign="top" class="specbundle"><table width="100%" cellpadding="0" cellspacing="0" align="center">
-                                    <tr><td height='15'></td></tr>
-                                    <tr>
-                                      <td>
-                                        <div class='contentEditableContainer contentTextEditable'>
-                                          <div class='contentEditable' style='text-align: left;'>
-                                            <h2 style='font-size:16px;'>Sub Feature 2</h2>
-                                            <br>
-                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Has been the industry's standard dummy text ever since the 1500s.</p>
-                                            <br>
-                                            <a target='_blank' href="#" class='link4' style='color:#27A1E5;' >read more</a>
-                                          </div>
-                                        </div>
-                                      </td>
-                                    </tr>
-                                  </table></td>
-                                  <td width="20" class="spechide">&nbsp;</td>
-                                  <td class="specbundle" valign="top" width="142" align="center"><div class='contentEditableContainer contentImageEditable'>
-                                    <div class='contentEditable'>
-                                      <img src="images/side2.png" alt="side image" width='142' height='142' data-default="placeholder" border="0">
-                                    </div>
-                                  </div></td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-
-
-                  </div>
-                  <div class="movableContent" style="border: 0px; padding-top: 0px; position: relative;">
-                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                      <tbody>
-                        <tr>
-                          <td height="40"></td>
-                        </tr>
-                        <tr>
-                          <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
-                            <tbody>
-                              <tr>
-                                <td class="specbundle" valign="top" width="142" align="center"><div class='contentEditableContainer contentImageEditable'>
-                                  <div class='contentEditable'>
-                                    <img src="images/side3.png" alt="side image" width='142' height='142' data-default="placeholder" border="0">
-                                  </div>
-                                </div></td>
-                                <td width="20" valign="top" class="spechide"></td>
-                                <td class="specbundle"><table width="100%" cellpadding="0" cellspacing="0" align="center">
-                                  <tr><td height='15'></td></tr>
-                                  <tr>
-                                    <td>
-                                      <div class='contentEditableContainer contentTextEditable'>
-                                        <div class='contentEditable' style='text-align: left;'>
-                                          <h2 style='font-size:16px;'>Sub Feature 3</h2>
-                                          <br>
-                                          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Has been the industry's standard dummy text ever since the 1500s.</p>
-                                          <br>
-                                          <a target='_blank' href="#" class='link4' style='color:#27A1E5;' >read more</a>
-                                        </div>
-                                      </div>
-                                    </td>
-                                  </tr>
-                                </table></td>
-                              </tr>
-                            </tbody>
-                          </table></td>
-                        </tr>
-                        <tr><td height='40' colspan="3"></td></tr>
-                        <tr><td colspan="3"><hr style='height:1px;background:#DDDDDD;border:none;'></td></tr>
-                      </tbody>
-                    </table>
-                  </div>
-
-                  <!-- =============== END BODY =============== -->
-                  <!-- =============== START FOOTER =============== -->
-
-                  <div class="movableContent" style="border: 0px; padding-top: 0px; position: relative;">
-                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                      <tbody>
-                        <tr>
-                          <td height="48"></td>
-                        </tr>
-                        <tr>
-                          <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
-                            <tbody>
-                              <tr>
-                                <td valign="top" width="90" class="spechide">&nbsp;</td>
-                                <td><table width="100%" cellpadding="0" cellspacing="0" align="center">
-                                  <tr>
-                                    <td>
-                                      <div class='contentEditableContainer contentTextEditable'>
-                                        <div class='contentEditable' style='text-align: center;color:#AAAAAA;'>
-                                          <p>
-                                            Sent by [SENDER_NAME] <br/>
-                                            [CLIENTS.ADDRESS] <br/>
-                                            [CLIENTS.PHONE] <br/>
-                                            <a target='_blank' href="[FORWARD]" style='color:#AAAAAA;'>Forward to a friend</a> <br/>
-                                            <a target='_blank' href="[UNSUBSCRIBE]" style='color:#AAAAAA;' >Unsubscribe</a>
-                                          </p>
-                                        </div>
-                                      </div>
-                                    </td>
-                                  </tr>
-                                </table></td>
-                                <td valign="top" width="90" class="spechide">&nbsp;</td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-
-
-                </div>
-                <div class="movableContent" style="border: 0px; padding-top: 0px; position: relative;">
-
-                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                    <tbody>
-                      <tr>
-                        <td height="40"></td>
-                      </tr>
-                      <tr>
-                        <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
-                          <tbody>
-                            <tr>
-                              <td valign="top" width="185" class="spechide">&nbsp;</td>
-                              <td class="specbundle2"><table width="100%" cellpadding="0" cellspacing="0" align="center">
-                                <tr>
-                                  <td width='40'>
-                                    <div class='contentEditableContainer contentFacebookEditable'>
-                                      <div class='contentEditable' style='text-align: center;color:#AAAAAA;'>
-                                        <img src="images/facebook.png" alt="facebook" width='40' height='40' data-max-width="40" data-customIcon="true" border="0" >
-                                      </div>
-                                    </div>
-                                  </td>
-                                  <td width='10'></td>
-                                  <td width='40'>
-                                    <div class='contentEditableContainer contentTwitterEditable'>
-                                      <div class='contentEditable' style='text-align: center;color:#AAAAAA;'>
-                                        <img src="images/twitter.png" alt="twitter" width='40' height='40' data-max-width="40" data-customIcon="true" border="0">
-                                      </div>
-                                    </div>
-                                  </td>
-                                  <td width='10'></td>
-                                  <td width='40'>
-                                    <div class='contentEditableContainer contentImageEditable'>
-                                      <div class='contentEditable' style='text-align: center;color:#AAAAAA;'>
-                                        <img src="images/red.png" alt="Pinterest" width='40' height='40' data-max-width="40" border="0">
-                                      </div>
-                                    </div>
-                                  </td>
-                                  <td width='10'></td>
-                                  <td width='40'>
-                                    <div class='contentEditableContainer contentImageEditable'>
-                                      <div class='contentEditable' style='text-align: center;color:#AAAAAA;'>
-                                        <img src="images/blue.png" alt="Social media" width='40' height='40' data-max-width="40" border="0">
-                                      </div>
-                                    </div>
-                                  </td>
-                                </tr>
-                              </table></td>
-                              <td valign="top" width="185" class="spechide">&nbsp;</td>
-                            </tr>
-                          </tbody>
+                            <td class="text-services">
+                              <h3>Marketing</h3>
+                              <p>Soluções para criação do seu Email Marketing e divulgação</p>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                      <td valign="top" width="33.333%" style="padding-top: 20px;" class="services">
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                          <tr>
+                            <td class="icon">
+                              <img src="images/003-recipe-book.png" alt="" style="width: 60px; max-width: 600px; height: auto; margin: auto; display: block;">
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="text-services">
+                              <h3>Desenvolvimento</h3>
+                              <p>Especialização no desenvolvimento de Sites e Sistemas Web</p>
+                            </td>
+                          </tr>
                         </table>
                       </td>
                     </tr>
+                  </table>
+                </td>
+              </tr><!-- end: tr -->
+              <tr>
+                <td class="bg_light email-section" style="width: 100%;">
+                  <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
                     <tr>
-                      <td height='40'></td>
+                      <td valign="middle" width="50%">
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                          <tr>
+                            <td>
+                              <img src="images/about.jpg" alt="" style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;">
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                      <td valign="middle" width="50%">
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                          <tr>
+                            <td class="text-services" style="text-align: left; padding-left:25px;">
+                              <div class="heading-section">
+                                <h2>Business Strategy</h2>
+                                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                                <p><a href="#" class="btn btn-primary">Read more</a></p>
+                              </div>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
                     </tr>
-                  </tbody>
-                </table>
+                  </table>
+                </td>
+              </tr><!-- end: tr -->
 
-                <!-- =============== END FOOTER =============== -->
-              </div>
-            </td>
-          </tr>
-        </tbody>
+
+
+              <tr>
+                <td valign="middle" class="counter" style="background-image: url(images/bg_1.jpg); background-size: cover; padding: 4em 0;">
+                  <div class="overlay"></div>
+                  <table>
+                    <tr>
+                      <td valign="middle" width="33.333%">
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                          <tr>
+                            <td class="counter-text">
+                              <span class="num">20</span>
+                              <span class="name">Clients</span>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                      <td valign="middle" width="33.333%">
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                          <tr>
+                            <td class="counter-text">
+                              <span class="num">1200</span>
+                              <span class="name">Projects</span>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                      <td valign="middle" width="33.333%">
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                          <tr>
+                            <td class="counter-text">
+                              <span class="num">100</span>
+                              <span class="name">Coffee Cups</span>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr><!-- end tr -->
+              <tr>
+                <td class="bg_white email-section">
+                  <div class="heading-section" style="text-align: center; padding: 0 30px;">
+                    <h2>Notícias</h2>
+                    <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                  </div>
+                  <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tr>
+                      <td valign="top" width="50%" style="padding-top: 20px;">
+                        <table role="presentation" cellspacing="0" cellpadding="10" border="0" width="100%">
+                          <tr>
+                            <td>
+                              <img src="images/blog-1.jpg" alt="" style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;">
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="text-services" style="text-align: left;">
+                              <p class="meta"><span>Posted on Feb 18, 2019</span> <span>Food</span></p>
+                              <h3>Business Key to Success</h3>
+                              <p>Far far away, behind the word mountains, far from the countries</p>
+                              <p><a href="#" class="btn btn-primary">Read more</a></p>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                      <td valign="top" width="50%" style="padding-top: 20px;">
+                        <table role="presentation" cellspacing="0" cellpadding="10" border="0" width="100%">
+                          <tr>
+                            <td>
+                              <img src="images/blog-2.jpg" alt="" style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;">
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="text-services" style="text-align: left;">
+                              <p class="meta"><span>Posted on Feb 18, 2019</span> <span>Food</span></p>
+                              <h3>Web Design Technique</h3>
+                              <p>Far far away, behind the word mountains, far from the countries</p>
+                              <p><a href="#" class="btn btn-primary">Read more</a></p>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr><!-- end: tr -->
+
+
+              <tr>
+                <td class="bg_white email-section" style="width: 100%;">
+                  <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tr>
+                      <td valign="middle" width="50%">
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                          <tr>
+                            <td>
+                              <img src="images/bg_2.jpg" alt="" style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;">
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                      <td valign="middle" width="50%">
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                          <tr>
+                            <td class="text-services" style="text-align: left; padding-left:25px;">
+                              <div class="heading-section">
+                                <h2>Valores</h2>
+                              </div>
+                              <div class="services-list">
+                                <img src="images/checked.png" alt="" style="width: 50px; max-width: 600px; height: auto; display: block;">
+                                <div class="text">
+                                  <h3>Organização</h3>
+                                  <p>A small river named Duden flows by their</p>
+                                </div>
+                              </div>
+                              <div class="services-list">
+                                <img src="images/checked.png" alt="" style="width: 50px; max-width: 600px; height: auto; display: block;">
+                                <div class="text">
+                                  <h3>Ética</h3>
+                                  <p>A small river named Duden flows by their</p>
+                                </div>
+                              </div>
+                              <div class="services-list">
+                                <img src="images/checked.png" alt="" style="width: 50px; max-width: 600px; height: auto; display: block;">
+                                <div class="text">
+                                  <h3>Foco</h3>
+                                  <p>A small river named Duden flows by their</p>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr><!-- end: tr -->
+              <tr>
+                <td class="primary email-section" style="text-align:center;">
+                  <div class="heading-section heading-section-white">
+                    <h2>Get Ready For Modern Design</h2>
+                    <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+                    <p><a href="#" class="btn btn-white-outline">Get Started</a></p>
+                  </div>
+                </td>
+              </tr><!-- end: tr -->
+            </table>
+
+          </td>
+        </tr><!-- end:tr -->
+        <!-- 1 Column Text + Button : END -->
       </table>
-    </td>
-    <td valign="top" width="20">&nbsp;</td>
-  </tr>
-</tbody>
-</table>
-</td>
-</tr>
-</tbody>
-</table>
-</td>
-</tr>
-</tbody>
-</table>
+      <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
+        <tr>
+          <td valign="middle" class="bg_black footer email-section">
+            <table>
+              <tr>
+                <td valign="top" width="33.333%" style="padding-top: 20px;">
+                  <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                    <tr>
+                      <td style="text-align: left; padding-right: 10px;">
+                        <h3 class="heading">About</h3>
+                        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+                <td valign="top" width="33.333%" style="padding-top: 20px;">
+                  <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                    <tr>
+                      <td style="text-align: left; padding-left: 5px; padding-right: 5px;">
+                        <h3 class="heading">Contact Info</h3>
+                        <ul>
+                          <li><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
+                          <li><span class="text">+2 392 3929 210</span></a></li>
+                        </ul>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+                <td valign="top" width="33.333%" style="padding-top: 20px;">
+                  <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                    <tr>
+                      <td style="text-align: left; padding-left: 10px;">
+                        <h3 class="heading">Useful Links</h3>
+                        <ul>
+                          <li><a href="#">Home</a></li>
+                          <li><a href="#">About</a></li>
+                          <li><a href="#">Services</a></li>
+                          <li><a href="#">Work</a></li>
+                        </ul>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr><!-- end: tr -->
+        <tr>
+          <td valign="middle" class="bg_black footer email-section">
+            <table>
+              <tr>
+                <td valign="top" width="33.333%">
+                  <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                    <tr>
+                      <td style="text-align: left; padding-right: 10px;">
+                        <p>Todos os direitos reservados</p>
+                        <p>&copy; 2019 SiteInfo</p>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+                <td valign="top" width="33.333%">
+                  <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                    <tr>
+                      <td style="text-align: right; padding-left: 5px; padding-right: 5px;">
+                        <p><a href="#" style="color: rgba(255,255,255,.4);">Unsubcribe</a></p>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
 
-
+    </div>
+  </center>
 </body>
 </html>

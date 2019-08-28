@@ -61,8 +61,7 @@
 
           <div class="col-lg-3 col-md-6 footer-info">
             <h3>SiteInfo</h3>
-            <p>A Tecnologia da Informação (TI) é uma área ou grupo no qual se desenvolve a grande maioria de atividades e serviços desenvolvidos pela área da computação.
-              Ou seja, são todos os proventos de informática desenvolvidos para melhoria de processos, trazendo automatização aos mesmos.
+            <p>Planejar e prover soluções de tecnologia unindo rigor técnico e agilidade de execução de tarefas de alto desempenho na vanguarda do cenário competitivo.
             </p>
           </div>
 
@@ -87,19 +86,19 @@
               <strong>Email:</strong> oliveira.roberto@gmail.com<br>
             </p>
 
-            <div class="social-links">
+            <!-- <div class="social-links">
               <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
               <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
               <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
               <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
               <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-            </div>
+            </div> -->
 
           </div>
 
           <div class="col-lg-3 col-md-6 footer-newsletter">
             <h4>Assine o Newsletter</h4>
-            <p>Cadastre seu e-mail e tenha acesso a importantes notícias na área de Tecnologia da Informação no Brasil e no mundo, receba tambem dicas importantes na área de tecnologia, tudo isso gratuitamente é só se cadastrar.</p>
+            <p>Cadastre seu e-mail e receba gratuitamente importantes dicas e notícias na área de Tecnologia da Informação no Brasil e no mundo é só cadastrar seu e-mail agora mesmo.</p>
             <form action="{{ url('assinar') }}" method="post">
               <input type="hidden" name="_token" value="{{ csrf_token() }}">
               <!-- <input type="email" name="email" placeholder="Seu EMail" style="width:250px"> -->
@@ -152,7 +151,7 @@
   }
 
   function EnviarEmail() {
-    alert("Sua Mensagem foi enviada com Sucesso, em breve entrarei em Contato. Obrigado pelo contato.");
+    alert("Sua Mensagem foi enviada com Sucesso, em breve entrarei em contato. Obrigado pelo contato.");
   }
 
   </script>

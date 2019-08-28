@@ -14,11 +14,13 @@ Intro Section
       <div class="carousel-inner" role="listbox">
 
         <div class="carousel-item">
-          <div class="carousel-background"><img src="img/intro-carousel/5.jpg" alt=""></div>
+          <div class="carousel-background"><img src="img/intro-carousel/janela.jpg" alt=""></div>
           <div class="carousel-container">
             <div class="carousel-content">
               <h2>Consultoria Digital</h2>
-              <p>Mais de 11 anos atuando na área de tecnologia da informação. Desenhar estratégias para sua empresa, compreender e se posicionar junto ao mercado de tecnologia com base nas transformações digitais.</p>
+              <div class="container">
+                <h5 style="color:white;">Mais de 11 anos atuando na área de tecnologia da informação. Desenhar estratégias para sua empresa, compreender e se posicionar junto ao mercado de tecnologia com base nas transformações digitais.</h5>
+              </div>
               <a href="#services" class="btn-get-started scrollto">Conheça</a>
             </div>
           </div>
@@ -28,7 +30,9 @@ Intro Section
           <div class="carousel-container">
             <div class="carousel-content">
               <h2>Desenvolvimento de Sites</h2>
-              <p>Desenvolvimento e criação de Sites, Hotsites, Blogs, Portais e catálogos on-line. Trabalhando com tecnologias e plataformas Open Source, adequando-se à necessidades primárias de cada cliente.</p>
+              <div class="container">
+                <h5 style="color:white;">Desenvolvimento de Sites que se adaptam a qualquer dispositivo, integração com redes sociais, otimização para mecanismos de busca, administração e gerenciamento de conteúdo e muito mais.  </h5>
+              </div>
               <a href="#services" class="btn-get-started scrollto">Conheça</a>
             </div>
           </div>
@@ -38,54 +42,28 @@ Intro Section
           <div class="carousel-container">
             <div class="carousel-content">
               <h2>Sistemas Web</h2>
-              <p>Criação e Desenvolvimento de Intranet (local ou nuvem), áreas restritas com segurança utilizando login e senha de acesso, adequando sempre as necessidades pontuais de cada empresa..</p>
+              <div class="container">
+                <h5 style="color:white;">Criação e Desenvolvimento de Intranet local ou em nuvem, áreas restritas com segurança utilizando login e senha de acesso, adequando sempre as necessidades pontuais de cada empresa.</h5>
+              </div>
               <a href="#services" class="btn-get-started scrollto">Conheça</a>
             </div>
           </div>
         </div>
 
-        <!-- <div class="carousel-item">
-        <div class="carousel-background"><img src="img/intro-carousel/3.jpg" alt=""></div>
-        <div class="carousel-container">
-        <div class="carousel-content">
-        <h2>Temporibus autem quibusdam</h2>
-        <p>Beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt omnis iste natus error sit voluptatem accusantium.</p>
-        <a href="#featured-services" class="btn-get-started scrollto">Get Started</a>
       </div>
+      <a class="carousel-control-prev" href="#introCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon ion-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#introCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon ion-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
     </div>
-  </div> -->
-
-  <!-- <div class="carousel-item">
-  <div class="carousel-background"><img src="img/intro-carousel/4.jpg" alt=""></div>
-  <div class="carousel-container">
-  <div class="carousel-content">
-  <h2>Nam libero tempore</h2>
-  <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum.</p>
-  <a href="#featured-services" class="btn-get-started scrollto">Get Started</a>
-</div>
-</div>
-</div> -->
-
-
-
-</div>
-
-<a class="carousel-control-prev" href="#introCarousel" role="button" data-slide="prev">
-  <span class="carousel-control-prev-icon ion-chevron-left" aria-hidden="true"></span>
-  <span class="sr-only">Previous</span>
-</a>
-
-<a class="carousel-control-next" href="#introCarousel" role="button" data-slide="next">
-  <span class="carousel-control-next-icon ion-chevron-right" aria-hidden="true"></span>
-  <span class="sr-only">Next</span>
-</a>
-
-</div>
-</div>
+  </div>
 </section><!-- #intro -->
 
 <main id="main">
-
   <!--==========================
   Featured Services Section
   ============================-->
@@ -93,24 +71,21 @@ Intro Section
     <div class="container">
       <div class="row">
 
-        <div class="col-lg-4 box">
+        <div class="col-lg-4 box box-bg">
           <i class="ion-ios-bookmarks-outline"></i>
           <h4 class="title"><a href="">Foco</a></h4>
           <p class="description">Foco em resultados, definir prioridades, estabelecer metas e planejar tarefas, cumprir esforços para alcançar e superar metas.</p>
         </div>
-
         <div class="col-lg-4 box box-bg">
           <i class="ion-ios-stopwatch-outline"></i>
-          <h4 class="title"><a href="">Ética</a></h4>
-          <p class="description">A ética profissional é o conjunto de valores, normas e condutas que conduzem e conscientizam as atitudes e o comportamento de um profissional na organização e junto aos seus clientes.</p>
-        </div>
-
-        <div class="col-lg-4 box">
-          <i class="ion-ios-heart-outline"></i>
           <h4 class="title"><a href="">Organização</a></h4>
           <p class="description">Organização é a forma como se dispõe um sistema para atingir os resultados pretendidos. Executar funções de modo controlado e coordenado com a missão de atingir um objetivo em comum com eficácia. </p>
         </div>
-
+        <div class="col-lg-4 box box-bg">
+          <i class="ion-ios-heart-outline"></i>
+          <h4 class="title"><a href="">Ética</a></h4>
+          <p class="description">A ética profissional é o conjunto de valores, normas e condutas que conduzem e conscientizam as atitudes e o comportamento de um profissional na organização e junto aos seus clientes.</p>
+        </div>
       </div>
     </div>
   </section><!-- #featured-services -->
@@ -124,10 +99,7 @@ Intro Section
       <header class="section-header">
         <h3>Sobre</h3>
         <p>
-          A Tecnologia da Informação (TI) é uma área ou grupo no qual se desenvolve a grande maioria de atividades e serviços desenvolvidos pela área da computação.
-          Ou seja, são todos os proventos de informática desenvolvidos para melhoria de processos, trazendo automatização aos mesmos.
-          Para o ramo empresarial em especial, a atuação do TI se dá por meio de softwares de gestão, maquinários específicos, inteligência artificial, etc.
-
+          O novo papel da Tecnologia da Informação dentro das empresas vem mudando nos últimos anos. Deixando de ser mera área de suporte, agora ela passou a ser estratégica e vital aos negócios. É necessário compreender como a Tecnologia da Informação pode ser o melhor caminho para deixar os negócios da Companhia mais estáveis, organizados e potentes para atuar com sucesso no competitivo sistema empresarial.
         </p>
       </header>
 
@@ -184,7 +156,7 @@ Intro Section
 
       <header class="section-header wow fadeInUp">
         <h3>Serviços</h3>
-        <p>Não importa que tipo de site você precisa, a missão é gerar mais resultados para o seu negócio na Internet. Desenvolvimento de Sites, Hotsites, Landing Pages, Blogs, Portais e Catálogos. Integração com Redes Sociais, Google Maps, WhatsApp, PagSeguro, PayPal e muito mais..</p>
+        <p>Vamos transformar idéias em valores.</p>
       </header>
 
       <div class="row">
@@ -239,82 +211,56 @@ Intro Section
     </div>
   </section><!-- #call-to-action -->
 
+
   <!--==========================
-  Facts Section
+  Portfolio Section
   ============================-->
-  <!-- <section id="facts"  class="wow fadeIn">
-  <div class="container">
-  <header class="section-header">
-  <h3>Facts</h3>
-  <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
-</header>
-<div class="row counters">
-<div class="col-lg-3 col-6 text-center">
-<span data-toggle="counter-up">274</span>
-<p>Clients</p>
-</div>
-<div class="col-lg-3 col-6 text-center">
-<span data-toggle="counter-up">421</span>
-<p>Projects</p>
-</div>
-<div class="col-lg-3 col-6 text-center">
-<span data-toggle="counter-up">1,364</span>
-<p>Hours Of Support</p>
-</div>
-<div class="col-lg-3 col-6 text-center">
-<span data-toggle="counter-up">18</span>
-<p>Hard Workers</p>
-</div>
-</div>
-<div class="facts-img">
-<img src="img/facts-img.png" alt="" class="img-fluid">
-<img src="{{ asset('img/laptop.png') }}" alt="" class="img-fluid" width="700" height="260">
-</div>
-</div>
-</section> -->
+  <section id="portfolio"  class="section-bg" >
+    <div class="container">
 
+      <header class="section-header">
+        <h3 class="section-title">Blog de Notícias</h3>
+      </header>
 
-<!--==========================
-Portfolio Section
-============================-->
-<section id="portfolio"  class="section-bg" >
-  <div class="container">
+      <div class="row">
+        <!-- <div class="col-lg-12">
+      </div> -->
+    </div>
 
-    <header class="section-header">
-      <h3 class="section-title">Notícias</h3>
-    </header>
-
-    <div class="row">
-      <!-- <div class="col-lg-12">
-    </div> -->
-  </div>
-
-  <div class="col-lg-12">
-    <div class="row">
+    <div class="col-lg-12">
+      <!-- Heading Row -->
       @foreach($posts as $post)
-      <div class="col-lg-4">
-        <div class="card" style="width: 18rem; margin-top:15px;">
-
+      <div class="row align-items-center my-5">
+        <div class="col-lg-4">
           @if ($post['imagem'])
-          <img src="{{ asset('uploads/posts/'.$post->imagem) }}" class="card-img-top" alt="card">
+          <img class="img-fluid rounded mb-4 mb-lg-0" src="{{ asset('uploads/posts/'.$post->imagem) }}" class="card-img-top" alt="card">
           @else
-          <img src="{{ asset('uploads/posts/padrao.jpeg') }}" width="286" height="178">
+          <img class="img-fluid rounded mb-4 mb-lg-0" src="{{ asset('uploads/posts/padrao.jpeg') }}" width="340" height="203">
           @endif
-
-          <div class="card-body">
-            <h5 class="card-title"><b>{{ str_limit($post->titulo, 55) }}</b></h5>
-            <p class="card-text">{{ str_limit($post->descricao, 60) }}</p>
-            <p class="card-text"><b>Criado em: {{ date('d/m/Y', strtotime($post->created_at)) }}</b></p>
-            <center><a href="{{ asset('noticia/detalhe/'.$post->id) }}" class="btn btn-primary">Detalhes</a></center>
-          </div>
+          <!-- <img class="img-fluid rounded mb-4 mb-lg-0" src="http://placehold.it/900x400" alt=""> -->
         </div>
+        <!-- /.col-lg-8 -->
+        <div class="col-lg-8">
+          <h3>{{ strtoupper(str_limit($post->titulo, 65)) }}</h3>
+          <p>{{ str_limit($post->descricao, 260) }}</p>
+          <p class="card-text"> Categoria: {{ $post->categoria->nome }}<br>
+          <b>Criado em: {{ date('d/m/Y', strtotime($post->created_at)) }}</b></p>
+          <a class="btn btn-primary pull-right" href="#">Detalhes</a>
+        </div>
+        <!-- /.col-md-4 -->
       </div>
+      <hr>
       @endforeach
-    </div><!-- FIM DA ROW -->
-    <br/>
-    <a href="{{ route('noticias') }}">Ver todas as Notícias >>></a>
+
+      <!-- /.row -->
+
+      <br/>
+      <center>
+        <a href="{{ route('noticias') }}">Ver todas as Notícias</a>
+      </center>
+    </div>
+
   </div>
-</div>
 </section><!-- #portfolio -->
 
 <!--==========================
@@ -324,16 +270,16 @@ Clients Section
   <div class="container">
 
     <header class="section-header">
-      <h3>Parceiros</h3>
+      <h3>Parceiros </h3>
     </header>
 
     <div class="owl-carousel clients-carousel">
+      <img src="img/clients/linux.jpg" alt="">
       <img src="img/clients/ubuntu.png" alt="">
       <img src="img/clients/php.png" alt="">
+      <img src="img/clients/wordpress.png" alt="">
       <img src="img/clients/mysql.png" alt="">
       <img src="img/clients/laravel.png" alt="">
-      <img src="img/clients/linux.jpg" alt="">
-      <img src="img/clients/wordpress.png" alt="">
       <img src="img/clients/google.jpg" alt="">
     </div>
 
@@ -391,7 +337,7 @@ Contact Section
         <div class="validation"></div>
       </div>
       <div class="form-group col-md-6">
-        <input type="email" class="form-control" name="email" id="email" placeholder="Seu E-mail válido" data-rule="email" data-msg="Entre com um e-mail válido" required/>
+        <input type="email" class="form-control" name="email" id="email" placeholder="Seu E-mail de contato" data-rule="email" data-msg="Entre com um e-mail válido" required/>
         <div class="validation"></div>
       </div>
     </div>

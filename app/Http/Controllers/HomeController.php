@@ -16,13 +16,13 @@ class HomeController extends Controller
 
 
   public function index()  {
-    $posts = Post::orderBy('created_at','desc')->take(6)->get();
+    $posts = Post::orderBy('created_at','desc')->take(4)->get();
     $categorias = Categoria::orderBy('nome');
     return view('home.index', compact('posts','categorias'));
   }
 
   public function homepage()  {
-    $posts = Post::orderBy('created_at','desc')->take(6)->get();
+    $posts = Post::orderBy('created_at','desc')->take(4)->get();
     $categorias = Categoria::orderBy('nome');
     return view('home.index', compact('posts','categorias'));
   }

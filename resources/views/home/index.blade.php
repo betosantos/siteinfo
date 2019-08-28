@@ -241,7 +241,7 @@ Intro Section
         </div>
         <!-- /.col-lg-8 -->
         <div class="col-lg-8">
-          <h3>{{ strtoupper(str_limit($post->titulo, 65)) }}</h3>
+          <h3>{{ mb_strtoupper(str_limit($post->titulo, 65)) }}</h3>
           <p>{{ str_limit($post->descricao, 260) }}</p>
           <p class="card-text"> Categoria: {{ $post->categoria->nome }}<br>
           <b>Criado em: {{ date('d/m/Y', strtotime($post->created_at)) }}</b></p>

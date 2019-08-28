@@ -8,6 +8,9 @@ Route::get('noticia/detalhe/categoria/{id}','HomeController@detalhebycat');
 Route::get('noticia/detalhe/{id}','NoticiasController@detalhes')->name('noticia.detalhe');
 Route::get('noticias','NoticiasController@index')->name('noticias');
 
+Route::post('buscar', 'NoticiasController@buscar')->name('buscar');
+
+
 Route::post('send','PostsController@send');
 Route::post('assinar','NewsletterController@assinar')->name('assinar');
 

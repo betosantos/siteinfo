@@ -86,26 +86,86 @@
 </div> -->
 <!-- /.row -->
 
+<div class="container">
 
-<!-- Content Row -->
-<div class="row">
-  <div class="col-md-4 mb-5">
-    <div class="card h-100">
-      <div class="card-body">
-        <img class="img-fluid rounded mb-4 mb-lg-0" src="http://placehold.it/900x400" alt="" >
-        <h2 class="card-title">Card One</h2>
-        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex numquam, maxime minus quam molestias corporis quod, ea minima accusamus.</p>
-      </div>
-      <center>
-        <div class="card-footer">
-          <a href="#" class="btn btn-primary btn-sm">More Info</a>
+
+  <!-- Page Content -->
+  <div class="row">
+    <!-- Post Content Column -->
+    <div class="col-lg-8">
+      <div class="row" style="margin-bottom:20px;">
+        @foreach($posts as $post)
+        <div class="col-lg-6">
+          <div class="card" style="margin-top:15px;">
+            <!-- Preview Image -->
+            <div class="card-body">
+              @if ($post['imagem'])
+                <img class="img-fluid rounded" src="{{ asset('uploads/posts/'.$post->imagem) }}" class="card-img-top" alt="card">
+                @else
+                <img src="{{ asset('uploads/posts/padrao.jpeg') }}" width="298" height="198">
+              @endif
+              <h5 class="card-title"><b> {{$post->titulo}}</b></h5>
+              <p class="card-text"><b>Criado em: {{ date('d/m/Y', strtotime($post->created_at)) }} </b></p>
+              <center><a href="{{ url('noticia/detalhe/'.$post->id) }}" class="btn btn-primary">Detalhes</a></center>
+            </div>
+          </div>
         </div>
-      </center>
+        @endforeach
+      </div><!-- FIM DA ROW -->
     </div>
-  </div>
 
+    <!-- Sidebar Widgets Column -->
+    <div class="col-md-4">
+
+      <!-- Categories Widget -->
+      <div class="card my-4">
+        <h5 class="card-header text-dark bg-light">Categorias Notícias</h5>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-lg-6">
+              <ul class="list-unstyled mb-0">
+                <li>
+                  <a href="{{ route('dicas') }}">Dicas</a>
+                </li>
+
+              </ul>
+            </div>
+            <div class="col-lg-6">
+              <ul class="list-unstyled mb-0">
+                <li>
+                  <a href="{{ route('informatica') }}">Informática</a>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Search Widget -->
+      <div class="card my-4">
+        <h5 class="card-header text-dark bg-light">Buscar</h5>
+        <div class="card-body">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Buscar por...">
+            <span class="input-group-btn">
+              <button class="btn btn-secondary" type="button">Buscar</button>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Side Widget -->
+      <!-- <div class="card my-4">
+      <h5 class="card-header">Side Widget</h5>
+      <div class="card-body">
+      You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!
+    </div>
+  </div> -->
 </div>
-<!-- /.row -->
+</div>
+
+
+
 
 </div>
 <!-- /.container -->

@@ -87,34 +87,81 @@
 <!-- /.row -->
 
 
-<!-- Content Row -->
+<!-- Page Content -->
 <div class="row">
-  @foreach($infos as $info)
-  <div class="col-md-4 mb-5">
-    <div class="card h-100">
-      <div class="card-body">
-        <!-- Preview Image -->
-        @if ($info['imagem'])
-        <img class="img-fluid rounded" src="{{ asset('uploads/posts/'.$info->imagem) }}" class="card-img-top" alt="card">
-        @else
-        <img class="img-fluid rounded" src="{{ asset('uploads/posts/padrao.jpeg') }}" width="286" height="178">
-        @endif
-        <hr>
+  <!-- Post Content Column -->
+  <div class="col-lg-8">
+    <div class="row" style="margin-bottom:20px;">
 
-        <h2 class="card-title">{{ str_limit($info->titulo,30) }}</h2>
-        <p class="card-text">{{ str_limit($info->descricao,90) }}</p>
-      </div>
-      <center>
-        <div class="card-footer">
-          <a href="#" class="btn btn-primary btn-sm">Detalhes</a>
+      <div class="col-lg-6">
+        <div class="card" style="margin-top:15px;">
+          <!-- Preview Image -->
+
+          <div class="card-body">
+            <h5 class="card-title"><b></b></h5>
+            <p class="card-text"><b>Criado em:  </b></p>
+            <center><a href="#" class="btn btn-primary">Detalhes</a></center>
+          </div>
         </div>
-      </center>
-    </div>
-  </div>
-  @endforeach
+      </div>
 
+
+
+    </div><!-- FIM DA ROW -->
+  </div>
+
+  <!-- Sidebar Widgets Column -->
+  <div class="col-md-4">
+
+    <!-- Categories Widget -->
+    <div class="card my-4">
+      <h5 class="card-header text-dark bg-light">Categorias Notícias</h5>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-lg-6">
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a href="{{ route('dicas') }}">Dicas</a>
+              </li>
+
+            </ul>
+          </div>
+          <div class="col-lg-6">
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a href="{{ route('informatica') }}">Informática</a>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Search Widget -->
+    <div class="card my-4">
+      <h5 class="card-header text-dark bg-light">Buscar</h5>
+      <div class="card-body">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Buscar por...">
+          <span class="input-group-btn">
+            <button class="btn btn-secondary" type="button">Buscar</button>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Side Widget -->
+    <!-- <div class="card my-4">
+    <h5 class="card-header">Side Widget</h5>
+    <div class="card-body">
+    You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!
+  </div>
+</div> -->
+</div>
 </div>
 <!-- /.row -->
+
+
 
 </div>
 <!-- /.container -->

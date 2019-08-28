@@ -61,7 +61,7 @@
 
 
   <header class="section-header" style="margin-top:110px;">
-    <h3>Notícias Categoria {{ $categoria->nome }}</h3>
+    <h3>Buscar Notícias </h3>
   </header>
 
 
@@ -71,29 +71,19 @@
     <!-- Page Content -->
     <div class="row">
       <!-- Post Content Column -->
+
       <div class="col-lg-8">
         <div class="row" style="margin-bottom:20px;">
-          @foreach($dicas as $dica)
-          <div class="col-lg-6">
-            <div class="card" style="margin-top:15px;">
-              <!-- Preview Image -->
-              @if ($dica['imagem'])
-              <img class="img-fluid rounded" src="{{ asset('uploads/posts/'.$dica->imagem) }}" class="card-img-top" alt="card">
-              @else
-              <img class="img-fluid rounded" src="{{ asset('uploads/posts/padrao.jpeg') }}" width="286" height="178">
-              @endif
-              <div class="card-body">
-                <h5 class="card-title"><b>{{ str_limit($dica->titulo,70) }}</b></h5>
-                <p class="card-text"><b>Criado em: {{ date('d/m/Y', strtotime($dica->created_at)) }} </b></p>
-                <center><a href="#" class="btn btn-primary">Detalhes</a></center>
-              </div>
+
+          <div class="col-lg-12">
+            <!-- Preview Image -->
+            <div class="card-body">
+              <h5 class="card-title"><b>Nenhum Registro Encontrado com o termo {{ mb_strtoupper($busca) }} </b></h5>
             </div>
           </div>
-          @endforeach
-
-
         </div><!-- FIM DA ROW -->
       </div>
+
 
       <!-- Sidebar Widgets Column -->
       <div class="col-md-4">
@@ -126,7 +116,7 @@
         <div class="card my-4">
           <h5 class="card-header text-dark bg-light">Buscar</h5>
           <div class="card-body">
-            <form method="POST" action="{{ url('buscar') }}">
+            <form method="GET" action="{{ url('buscar') }}">
               <div class="input-group">
                 @csrf
                 <input type="text" class="form-control" placeholder="Buscar por..." name="busca" id="busca">

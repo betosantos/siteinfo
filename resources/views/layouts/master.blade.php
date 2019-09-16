@@ -14,8 +14,12 @@
 <meta charset="utf-8">
 <title>SiteInfo Tecnologia da Informação</title>
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
-<meta content="" name="keywords">
-<meta content="" name="description">
+<meta content="" name="Portal de conteúdo Web">
+<meta content="" name="SiteInfo">
+<?php
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Methods: GET, PUT, POST, DELETE, OPTIONS');
+?>
 
 <!-- Favicons -->
 <link href="{{ asset('img/favicon.png') }}" rel="icon">
@@ -87,74 +91,98 @@
             </p>
 
             <!-- <div class="social-links">
-              <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-              <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-              <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-              <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
-              <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-            </div> -->
-
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-newsletter">
-            <h4>Assine o Newsletter</h4>
-            <p>Cadastre seu e-mail e receba gratuitamente importantes dicas e notícias na área de Tecnologia da Informação no Brasil e no mundo é só cadastrar seu e-mail agora mesmo.</p>
-            <form action="{{ url('assinar') }}" method="post">
-              <input type="hidden" name="_token" value="{{ csrf_token() }}">
-              <!-- <input type="email" name="email" placeholder="Seu EMail" style="width:250px"> -->
-              <input type="email" class="form-control" name="email" id="email" placeholder="Informe seu E-mail" data-rule="email" data-msg="Entre com um e-mail válido" required/>
-              <input type="submit" value="Assinar" onclick="myFunction()">
-            </form>
-          </div>
+            <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+            <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+            <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+            <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+            <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+          </div> -->
 
         </div>
+
+        <div class="col-lg-3 col-md-6 footer-newsletter">
+          <h4>Assine o Newsletter</h4>
+          <p>Cadastre seu e-mail e receba gratuitamente importantes dicas e notícias na área de Tecnologia da Informação no Brasil e no mundo é só cadastrar seu e-mail agora mesmo.</p>
+          <form action="{{ url('assinar') }}" method="post">
+            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+            <!-- <input type="email" name="email" placeholder="Seu EMail" style="width:250px"> -->
+            <input type="email" class="form-control" name="email" id="email" placeholder="Informe seu E-mail" data-rule="email" data-msg="Entre com um e-mail válido" required/>
+            <input type="submit" value="Assinar" onclick="myFunction()">
+          </form>
+        </div>
+
       </div>
     </div>
+  </div>
 
-    <div class="container">
-      <div class="copyright">
-        &copy; <strong>SiteInfo</strong>. Todos os direitos reservados.
-      </div>
-      <div class="credits">
-        Desenvolvido por: <a href="http://www.siteinfo.com.br/">José Roberto Oliveira</a>
-      </div>
+  <div class="container">
+    <div class="copyright">
+      &copy; <strong>SiteInfo</strong>. Todos os direitos reservados.
     </div>
-  </footer><!-- #footer -->
+    <div class="credits">
+      Desenvolvido por: <a href="http://www.siteinfo.com.br/">José Roberto Oliveira</a>
+    </div>
+  </div>
+</footer><!-- #footer -->
 
-  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-  <!-- Uncomment below i you want to use a preloader -->
-  <!-- <div id="preloader"></div> -->
+<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+<!-- Uncomment below i you want to use a preloader -->
+<!-- <div id="preloader"></div> -->
 
-  <!-- JavaScript Libraries -->
-  <script src="{{ asset('lib/jquery/jquery.min.js') }}"></script>
-  <script src="{{ asset('lib/jquery/jquery-migrate.min.js') }}"></script>
-  <script src="{{ asset('lib/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-  <script src="{{ asset('lib/easing/easing.min.js') }}"></script>
-  <script src="{{ asset('lib/superfish/hoverIntent.js') }}"></script>
-  <script src="{{ asset('lib/superfish/superfish.min.js') }}"></script>
-  <script src="{{ asset('lib/wow/wow.min.js') }}"></script>
-  <script src="{{ asset('lib/waypoints/waypoints.min.js') }}"></script>
-  <script src="{{ asset('lib/counterup/counterup.min.js') }}"></script>
-  <script src="{{ asset('lib/owlcarousel/owl.carousel.min.js') }}"></script>
-  <script src="{{ asset('lib/isotope/isotope.pkgd.min.js') }}"></script>
-  <script src="{{ asset('lib/lightbox/js/lightbox.min.js') }}"></script>
-  <script src="{{ asset('lib/touchSwipe/jquery.touchSwipe.min.js') }}"></script>
-  <!-- Contact Form JavaScript File -->
-  <script src="{{ asset('contactform/contactform.js') }}"></script>
+<!-- JavaScript Libraries -->
+<script src="{{ asset('lib/jquery/jquery.min.js') }}"></script>
+<script src="{{ asset('lib/jquery/jquery-migrate.min.js') }}"></script>
+<script src="{{ asset('lib/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ asset('lib/easing/easing.min.js') }}"></script>
+<script src="{{ asset('lib/superfish/hoverIntent.js') }}"></script>
+<script src="{{ asset('lib/superfish/superfish.min.js') }}"></script>
+<script src="{{ asset('lib/wow/wow.min.js') }}"></script>
+<script src="{{ asset('lib/waypoints/waypoints.min.js') }}"></script>
+<script src="{{ asset('lib/counterup/counterup.min.js') }}"></script>
+<script src="{{ asset('lib/owlcarousel/owl.carousel.min.js') }}"></script>
+<script src="{{ asset('lib/isotope/isotope.pkgd.min.js') }}"></script>
+<script src="{{ asset('lib/lightbox/js/lightbox.min.js') }}"></script>
+<script src="{{ asset('lib/touchSwipe/jquery.touchSwipe.min.js') }}"></script>
+<!-- Contact Form JavaScript File -->
+<script src="{{ asset('contactform/contactform.js') }}"></script>
 
-  <!-- Template Main Javascript File -->
-  <script src="{{ asset('js/main.js') }}"></script>
+<!-- Template Main Javascript File -->
+<script src="{{ asset('js/main.js') }}"></script>
 
-  <script>
-  function myFunction() {
-    alert("Seu E-mail foi cadastrado com Sucesso!!!");
+<script>
+function myFunction() {
+  alert("Seu E-mail foi cadastrado com Sucesso!!!");
+}
+
+function EnviarEmail() {
+
+  var empt = document.forms["formcontato"]["name"].value;
+  if (empt == "")
+  {
+    alert("O campo Nome não foi informado!");
+    return false;
+  }
+  var empt = document.forms["formcontato"]["email"].value;
+  if (empt == "")
+  {
+    alert("O campo E-mail não foi informado!");
+    return false;
+  }
+  var empt = document.forms["formcontato"]["assunto"].value;
+  if (empt == "")
+  {
+    alert("O campo Assunto não foi informado!");
+    return false;
+  }
+  var empt = document.forms["formcontato"]["mensagem"].value;
+  if (empt == "")
+  {
+    alert("O campo Mensagem não foi informado!");
+    return false;
   }
 
-  function EnviarEmail() {
-    alert("Sua Mensagem foi enviada com Sucesso, em breve entrarei em contato. Obrigado pelo contato.");
-  }
-
-  </script>
+}
+</script>
 
 
 </body>

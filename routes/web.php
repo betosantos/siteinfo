@@ -4,6 +4,11 @@
 //     return view('welcome');
 // });
 
+Route::get('json/posts','HomeController@json_posts')->name('json_posts');
+Route::get('json/users/{nome}/{email}','HomeController@json_users')->name('json_users');
+Route::get('json/users/all','HomeController@json_users_all')->name('json_users_all');
+
+
 Route::get('noticia/detalhe/categoria/{id}','HomeController@detalhebycat');
 Route::get('noticia/detalhe/{id}','NoticiasController@detalhes')->name('noticia.detalhe');
 Route::get('noticias','NoticiasController@index')->name('noticias');

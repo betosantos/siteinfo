@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Post;
 use App\Categoria;
+use App\User;
+use Auth; //class import
 
 class HomeController extends Controller
 {
@@ -51,6 +53,49 @@ class HomeController extends Controller
   }
 
 
+  public function json_posts() {
+    $posts = Post::orderBy('created_at','desc')->get();
+    return response()->json($posts);
+  }
+
+
+public function json_users_all() {
+  $data = [
+    'status' => 'ok',
+    'users' => User::all()
+    // $users = User::orderBy('created_at','desc')->get();
+  ];
+  return response()->json($data);
+}
+
+
+
+  public function json_users($name, $password) {
+    if (Auth::attempt(['name' => $name, 'password' => $password]))
+    {
+      $data = [
+        'name' => $name,
+        'password' => $password,
+        'status' => 'ok'
+      ];
+      return response()->json($data);
+    } else {
+      return response()->json([
+        'status','Erro'
+      ]);
+    }
+    // $data = [
+    //   'status' => 'ok',
+    //   'users' => User::all()
+    //   // $users = User::orderBy('created_at','desc')->get();
+    // ];
+    // $data = [
+    //   'nome' => 'jose',
+    //   'email' => 'gmail.com'
+    // ];
+
+
+  }
 
 
 }

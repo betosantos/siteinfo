@@ -71,20 +71,21 @@ Intro Section
     <div class="container">
       <div class="row">
 
-        <div class="col-lg-4 box box-bg">
+        <!-- <div class="col-lg-4 box box-bg"> degrade background  -->
+          <div class="col-lg-4 box">
           <i class="ion-ios-bookmarks-outline"></i>
           <h4 class="title"><a href="">Foco</a></h4>
           <p class="description">Foco em resultados, definir prioridades, estabelecer metas e planejar tarefas, cumprir esforços para alcançar e superar metas.</p>
         </div>
-        <div class="col-lg-4 box box-bg">
+        <div class="col-lg-4 box">
           <i class="ion-ios-stopwatch-outline"></i>
           <h4 class="title"><a href="">Organização</a></h4>
-          <p class="description">Organização é a forma como se dispõe um sistema para atingir os resultados pretendidos. Executar funções de modo controlado e coordenado com a missão de atingir um objetivo em comum com eficácia. </p>
+          <p class="description">Executar funções de modo controlado e coordenado com a missão de atingir um objetivo em comum com eficácia. </p>
         </div>
-        <div class="col-lg-4 box box-bg">
+        <div class="col-lg-4 box">
           <i class="ion-ios-heart-outline"></i>
           <h4 class="title"><a href="">Ética</a></h4>
-          <p class="description">A ética profissional é o conjunto de valores, normas e condutas que conduzem e conscientizam as atitudes e o comportamento de um profissional na organização e junto aos seus clientes.</p>
+          <p class="description">A ética profissional é o conjunto de valores, normas e condutas que conduzem as atitudes e o comportamento de um profissional junto aos seus clientes.</p>
         </div>
       </div>
     </div>
@@ -245,7 +246,7 @@ Intro Section
           <p>{{ str_limit($post->descricao, 260) }}</p>
           <p class="card-text"> Categoria: {{ $post->categoria->nome }}<br>
           <b>Criado em: {{ date('d/m/Y', strtotime($post->created_at)) }}</b></p>
-          <a class="btn btn-primary pull-right" href="#">Detalhes</a>
+          <a class="btn btn-primary pull-right" href="{{ route('noticia.detalhe', $post->id) }}">Detalhes</a>
         </div>
         <!-- /.col-md-4 -->
       </div>
@@ -256,7 +257,7 @@ Intro Section
 
       <br/>
       <center>
-        <a href="{{ route('noticias') }}">Ver todas as Notícias</a>
+        <button type="button" class="btn btn-outline-success btn-lg btn-block"><a href="{{ route('noticias') }}">Ver todas as Notícias</a> &nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
       </center>
     </div>
 
@@ -329,7 +330,7 @@ Contact Section
 <div class="form">
   <div id="sendmessage">Your message has been sent. Thank you!</div>
   <div id="errormessage"></div>
-  <form action="{{ url('send') }}" method="post">
+  <form name="formcontato" action="{{ url('send') }}" method="post">
     @csrf
     <div class="form-row">
       <div class="form-group col-md-6">
